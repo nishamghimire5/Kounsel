@@ -22,3 +22,68 @@
   letter-spacing: 3px;
   font-family: "Montez", cursive;
 }
+* {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+
+.container {
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+}
+
+.text-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  background-color: black;
+  color: white;
+  flex: 8;
+  flex-direction: column;
+}
+
+.text-content h1 {
+  font-size: 60px;
+}
+
+.text-content p {
+  font-size: 25px;
+}
+
+
+.site-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-kounsel, .intro-counselor, .intro-anonymous {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 150px 25px;
+}
+
+.text-area p {
+  margin: 15px 0px;
+}
+
+.img-area {
+  justify-content: right;
+  margin-left: 150px;
+  margin-top: 50px;
+  margin-right: 150px;
+}
+
+.img-area img {
+  border-radius: 500px;
+}
+
+
