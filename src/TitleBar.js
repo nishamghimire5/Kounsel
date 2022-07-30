@@ -35,4 +35,4 @@ const TitleBar = () => {
     )
 }
 
-export default TitleBar;
+export default TitleBar
