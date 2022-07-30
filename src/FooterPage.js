@@ -12,7 +12,8 @@ const FooterPage = () => {
                 >
                     {/* <!-- Left --> */}
                     <div className="me-5 d-none d-lg-block">
-                        <span>Get connected with us on social networks:</span>
+                        <p className="mx-3">Get connected with us on social networks:</p>
+
                     </div>
                     {/* <!-- Left --> */}
 

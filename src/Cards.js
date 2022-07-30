@@ -2,9 +2,8 @@ import './Cards.css';
 import CardData from './CardData';
 import CardInfo from './datas/councelling.json';
 
-const Cards = (props) => {
+const Cards = () => {
     let sectionTopText = `We can help you with`;
-
     return (<div>
         <section className="wrapper">
             <div className="container">
