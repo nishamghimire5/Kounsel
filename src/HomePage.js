@@ -2,6 +2,7 @@ import image from './Images/bgimage1.jpg';
 import './HomePage.css'
 import Cards from './Cards'
 import Testimonials from './Testimonials'
+import { Link } from "react-router-dom"
 
 const HomePage = () => {
     let slogan = "A Safe Space"
@@ -15,9 +16,11 @@ const HomePage = () => {
                     <div className="dropdown font-sans tracking-wider">
                         <h2>Kounsel</h2>
                         <p>{slogan}</p>
-                        <button className="btn getStartedBtn btn-outline-dark " type="button" >
-                            Get Started
-                        </button>
+                        <Link to="/singup">
+                            <button className="btn getStartedBtn btn-outline-dark " type="button" >
+                                Get Started
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
