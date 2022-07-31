@@ -83,8 +83,12 @@ body {
   margin-top: 30px;
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   text-decoration: none;
+} 
+.main:hover .hower{
+  display: none;
 }
-.card .card-img-overlay {
+/* to bring the blue mask over the pictures or cards */
+/* .card .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
   background: linear-gradient(
@@ -92,20 +96,8 @@ body {
     rgba(104, 150, 180, 0.379) 0%,
     #455f71 100%
   );
-}
-
+} */
+/* 
 img.card-img {
   z-index: 999;
-}
-
-.banner-content {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  display:none;
-}
-
-
-.card-img-overlay:hover + .banner-content{
-  display:block;
-}
+} */
