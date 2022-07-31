@@ -1,3 +1,5 @@
+
+
 body {
   /* Created with https://www.css-gradient.com */
   background: #ffff;
@@ -104,4 +106,6 @@ img.card-img {
   display:none;
 }
 
-.card-img-overlay:hover + .banner-content{display:block;}
+.card-img-overlay:hover + .card-title{
+  display:block;
+}
