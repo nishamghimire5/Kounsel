@@ -101,14 +101,3 @@ body {
 img.card-img {
   z-index: 999;
 } */
-
-/* .banner-content {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  display:none;
-} */
-
-/* .card-img-overlay:hover + .banner-content{
-  display:block;
-} */
