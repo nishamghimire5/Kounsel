@@ -1,6 +1,7 @@
 import './Cards.css';
 import CardData from './CardData';
 import CardInfo from './datas/councelling.json';
+//import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Cards = () => {
     let sectionTopText = `We can help you with`;
@@ -15,7 +16,7 @@ const Cards = () => {
                 </div>
                 <div className='row' style={{ display: 'flex' }}>
                     {CardInfo.map((card, index) => {
-                        return (<CardData key={index} textInPic={card.title} imgLink={card.image} />)
+                        return (<CardData key={index} textInPic={card.title} imgLink={card.image} text={card.title}/>)
                     }
                     )}
                 </div>

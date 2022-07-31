@@ -1,3 +1,5 @@
+
+
 body {
   /* Created with https://www.css-gradient.com */
   background: #ffff;
@@ -11,6 +13,7 @@ body {
 }
 
 .card {
+  position: relative;
   border: none;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
@@ -36,7 +39,7 @@ body {
 }
 .card.card-has-bg:before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -79,17 +82,29 @@ body {
 .card:hover .card-body {
   margin-top: 30px;
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  text-decoration: none;
 }
 .card .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
   background: linear-gradient(
     0deg,
-    rgba(35, 79, 109, 0.3785889356) 0%,
+    rgba(104, 150, 180, 0.379) 0%,
     #455f71 100%
   );
 }
 
 img.card-img {
   z-index: 999;
+}
+
+.banner-content {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  display:none;
+}
+
+.card-img-overlay:hover + .banner-content{
+  display:block;
 }

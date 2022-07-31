@@ -11,7 +11,7 @@ const App = () => {
     <div className="App">
       <TitleBar />
       <HomePage />
-      <Cards />
+      <Cards text = "test data"/>
       <Testimonials />
       <FooterPage />
     </div>
