@@ -1,3 +1,6 @@
+import { Card } from "react-bootstrap";
+
+
 const CardData = (props) => {
     // let height = { "mix-height": "390px" };
     return (
@@ -9,6 +12,7 @@ const CardData = (props) => {
                     <h4 className="card-title mt-0 "><a className="text-white" herf="/">{props.textInPic}</a></h4>
                 </div>
                 <div className="card-footer">
+                    <h3>{props.text}</h3>
 
                     {/* <div className="media">
                         <p className="m-3" >hello</p>
