@@ -105,6 +105,7 @@ img.card-img {
   display:none;
 }
 
+
 .card-img-overlay:hover + .banner-content{
   display:block;
 }
