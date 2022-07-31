@@ -16,7 +16,7 @@ const Cards = () => {
                 </div>
                 <div className='row' style={{ display: 'flex' }}>
                     {CardInfo.map((card, index) => {
-                        return (<CardData key={index} textInPic={card.title} imgLink={card.image} text={card.title}/>)
+                        return (<CardData key={index} textInPic={card.title} imgLink={card.image} />)
                     }
                     )}
                 </div>
