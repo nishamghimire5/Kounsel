@@ -1,31 +1,33 @@
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
+
 const TitleBar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light p-3">
-                <a className="navbar-brand" href="/">Kounsel</a>
+                <Link className="navbar-brand" to="/">Kounsel</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <a className="nav-link" href="/">Home <span className="sr-only"></span></a>
+                            <Link className="nav-link" to="/">Home <span className="sr-only"></span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">About</a>
+                            <CustomLink className="nav-link" to="/about">About</CustomLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Articles</a>
+                            <CustomLink className="nav-link" to="/articles">Articles</CustomLink>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href='/' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link className="nav-link dropdown-toggle" to='/' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Login
-                            </a>
+                            </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href='/'>Sign In</a>
-                                <a className="dropdown-item" href='/'>Sign Up</a>
+                                <CustomLink className="dropdown-item" to='/signin'>Sign In</CustomLink>
+                                <CustomLink className="dropdown-item" to='/singup'>Sign Up</CustomLink>
                                 {/* <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href='/'>Something else here</a> */}
+                                <Link className="dropdown-item" to='/'>Something else here</Link> */}
                             </div>
                         </li>
                     </ul>
@@ -33,6 +35,17 @@ const TitleBar = () => {
             </nav>
         </>
     )
-}
+    function CustomLink({ to, children, ...props }) {
+        const resolvedPath = useResolvedPath(to)
+        const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
+        return (
+            <li className={isActive ? "active" : ""}>
+                <Link to={to} {...props}>
+                    {children}
+                </Link>
+            </li>
+        )
+    }
+}
 export default TitleBar;
