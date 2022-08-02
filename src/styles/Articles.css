@@ -29,6 +29,8 @@ a, a:hover {
 }
 
 /* Cards */
+
+
 .postcard {
   flex-wrap: wrap;
   display: flex;
@@ -38,6 +40,7 @@ a, a:hover {
   overflow: hidden;
   position: relative;
   color: #ffffff;
+  flex-direction: row-reverse;
 }
 .postcard.dark {
   background-color: #18151f;
