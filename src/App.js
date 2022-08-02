@@ -1,4 +1,3 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import TitleBar from './Layout/Header/TitleBar'
 import HomePage from './Layout/Main/HomePage'
@@ -8,6 +7,7 @@ import Articles from './Articles/Articles'
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
 import FooterPage from './Layout/Footer/FooterPage'
+import './App.css';
 
 
 
@@ -18,12 +18,12 @@ const App = () => {
       <TitleBar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/articlesshow" element={<ArticlesShow />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/singup" element={<SignUp />} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/articlesshow" element={<ArticlesShow />} />
+          <Route exact path="/articles" element={<Articles />} />
+          <Route exact path="/signin" element={<SignIn />} />
+          <Route exact path="/singup" element={<SignUp />} />
         </Routes>
       </div>
       {/* Homepage

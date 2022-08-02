@@ -1,4 +1,4 @@
-import image from '../../Assets/Images/bgimage1.jpg';
+import image from '../../Assets/Images/bgimage.jpg';
 import styles from '../../styles/HomePage.module.css';
 import Cards from '../../Cards/Cards'
 import Testimonials from '../../Testimonials/Testimonials.js';

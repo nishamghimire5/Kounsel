@@ -1,4 +1,9 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import Articles from "../../Login/SignIn";
+import About from "../../Login/SignIn";
+import SignIn from "../../Login/SignIn";
+import SignUp from "../../Login/SignUp";
+import HomePage from "../Main/HomePage";
 
 const TitleBar = () => {
     return (
@@ -10,42 +15,42 @@ const TitleBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
-                        <ul className="nav-item active">
+                        <li className="nav-item active">
                             <Link className="nav-link" to="/">Home <span className="sr-only"></span></Link>
-                        </ul>
-                        <ul className="nav-item">
-                            <CustomLink className="nav-link" to="/about">About</CustomLink>
-                        </ul>
-                        <ul className="nav-item">
-                            <CustomLink className="nav-link" to="/articlesshow">Articles</CustomLink>
-                        </ul>
-                        <ul className="nav-item dropdown">
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about">About</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/articlesshow">Articles</Link>
+                        </li>
+                        <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Login
                             </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <CustomLink className="dropdown-item" to='/signin'>Sign In</CustomLink>
-                                <CustomLink className="dropdown-item" to='/singup'>Sign Up</CustomLink>
+                                <Link className="dropdown-item" to='/signin'>Sign In</Link>
+                                <Link className="dropdown-item" to='/singup'>Sign Up</Link>
                                 {/* <div className="dropdown-divider"></div>
                                 <Link className="dropdown-item" to='/'>Something else here</Link> */}
                             </div>
-                        </ul>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </>
     )
-    function CustomLink({ to, children, ...props }) {
-        const resolvedPath = useResolvedPath(to)
-        const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+    // function CustomLink({ to, children, ...props }) {
+    //     const resolvedPath = useResolvedPath(to)
+    //     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
-        return (
-            <li className={isActive ? "active" : ""}>
-                <Link to={to} {...props}>
-                    {children}
-                </Link>
-            </li>
-        )
-    }
+    //     return (
+    //         <li className={isActive ? "active" : ""}>
+    //             <Link to={to} {...props}>
+    //                 {children}
+    //             </Link>
+    //         </li>
+    //     )
+    // }
 }
 export default TitleBar;

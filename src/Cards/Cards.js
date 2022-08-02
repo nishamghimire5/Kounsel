@@ -5,7 +5,7 @@ import CardInfo from '../Assets/datas/councelling.json';
 
 const Cards = () => {
     let sectionTopText = `We can help you with`;
-    return (<div className={styles.body}>
+    return (<div className={`${styles.Body} body`}>
         <section className={styles.wrapper}>
             <div className="container">
                 <div className="row">
