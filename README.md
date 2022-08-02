@@ -10,7 +10,7 @@ A brief description of how the project should be initialized :
 - Install React
 - Clone the repository
 - cd {folder_you_downloaded}
-#### Then in the terminal type:
+#### Then in the terminal, type:
 ```bash
   npm install
   npm start
