@@ -7,7 +7,7 @@ const Articles = (props) => {
 
                 <section className="dark">
                     <div className="container py-4">
-                        <h1 className="h1 text-center" id="pageHeaderTitle">Article no: {props.check}</h1>
+                        <h1 className="h1 text-center" id="pageHeaderTitle">Article no: {props.check + 1}</h1>
 
 
                         <article className="postcard dark blue">
@@ -37,7 +37,7 @@ const Articles = (props) => {
 
                 <section className="light">
                     <div className="container py-2">
-                        <div className="h1 text-center text-dark" id="pageHeaderTitle">Article no: {props.check}</div>
+                        <div className="h1 text-center text-dark" id="pageHeaderTitle">Article no: {props.check + 1}</div>
 
                         <article className="postcard light blue">
                             <a className="postcard__img_link" href="#">
