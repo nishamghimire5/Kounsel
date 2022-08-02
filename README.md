@@ -6,7 +6,7 @@
 
 A brief description of how the project should be initialized :
 
-## Procedures:
+*Procedures:*
 - Install React
 - Clone the repository
 - cd {folder_you_downloaded}
