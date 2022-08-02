@@ -1,9 +1,4 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import Articles from "../../Login/SignIn";
-import About from "../../Login/SignIn";
-import SignIn from "../../Login/SignIn";
-import SignUp from "../../Login/SignUp";
-import HomePage from "../Main/HomePage";
+import { Link } from "react-router-dom"
 
 const TitleBar = () => {
     return (
@@ -40,17 +35,5 @@ const TitleBar = () => {
             </nav>
         </>
     )
-    // function CustomLink({ to, children, ...props }) {
-    //     const resolvedPath = useResolvedPath(to)
-    //     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
-    //     return (
-    //         <li className={isActive ? "active" : ""}>
-    //             <Link to={to} {...props}>
-    //                 {children}
-    //             </Link>
-    //         </li>
-    //     )
-    // }
 }
 export default TitleBar;
