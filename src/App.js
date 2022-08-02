@@ -1,13 +1,13 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
-import TitleBar from './TitleBar'
-import HomePage from './HomePage'
-import About from './About'
-import ArticlesShow from './ArticlesShow'
-import Articles from './Articles'
-import SignIn from './SignIn'
-import SignUp from './SignUp'
-import FooterPage from './FooterPage'
+import TitleBar from './Layout/Header/TitleBar'
+import HomePage from './Layout/Main/HomePage'
+import About from './About/About'
+import ArticlesShow from './Articles/ArticlesShow'
+import Articles from './Articles/Articles'
+import SignIn from './Login/SignIn'
+import SignUp from './Login/SignUp'
+import FooterPage from './Layout/Footer/FooterPage'
 
 
 

@@ -20,7 +20,7 @@ const TitleBar = () => {
                             <CustomLink className="nav-link" to="/articlesshow">Articles</CustomLink>
                         </ul>
                         <ul className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to='/' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Login
                             </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">

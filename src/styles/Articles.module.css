@@ -45,7 +45,7 @@ a, a:hover {
 .postcard.light {
   background-color: #e1e5ea;
 }
-.postcard .t-dark {
+.postcard .t_dark {
   color: #18151f;
 }
 .postcard a {
@@ -85,7 +85,7 @@ a, a:hover {
   display: flex;
   flex-direction: column;
 }
-.postcard .postcard__preview-txt {
+.postcard .postcard__preview_txt {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;

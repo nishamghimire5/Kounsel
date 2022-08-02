@@ -1,7 +1,7 @@
-import image from './Images/bgimage1.jpg';
-import './HomePage.css'
-import Cards from './Cards'
-import Testimonials from './Testimonials'
+import image from '../../Assets/Images/bgimage1.jpg';
+import styles from '../../styles/HomePage.module.css';
+import Cards from '../../Cards/Cards'
+import Testimonials from '../../Testimonials/Testimonials.js';
 import { Link } from "react-router-dom"
 
 const HomePage = () => {
@@ -9,15 +9,15 @@ const HomePage = () => {
     return (
         <>
             {/* background image in Homepage */}
-            <div className="box ">
-                <img className="img-responsive img-fluid bgHImg " src={image} alt="bg-pic" />
+            <div className={` box ${styles.box}`}>
+                <img className={`img-responsive img-fluid ${styles.bgHImg} `} src={image} alt="bg-pic" />
                 {/* On the image text */}
-                <div className="img-title">
+                <div className={styles.img_title}>
                     <div className="dropdown font-sans tracking-wider">
                         <h2>Kounsel</h2>
                         <p>{slogan}</p>
                         <Link to="/singup">
-                            <button className="btn getStartedBtn btn-outline-dark " type="button" >
+                            <button className={`styles.btn ${styles.getStartedBtn} btn-outline-dark`} type="button" >
                                 Get Started
                             </button>
                         </Link>
