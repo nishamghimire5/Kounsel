@@ -1,6 +1,6 @@
-import './Cards.css';
+import '../styles/Cards.css';
 import CardData from './CardData';
-import CardInfo from './datas/councelling.json';
+import CardInfo from '../Assets/datas/councelling.json';
 //import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Cards = () => {
@@ -11,7 +11,7 @@ const Cards = () => {
                 <div className="row">
                     <div className="col text-center mb-5">
                         <h1 className="display-4">{sectionTopText}</h1>
-                        <p className="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p>
+                        {/* <p className="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p> */}
                     </div>
                 </div>
                 <div className='row' style={{ display: 'flex' }}>
