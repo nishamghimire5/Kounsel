@@ -2,13 +2,17 @@ import '../styles/Articles.css';
 import ArticleData from '../Assets/datas/articles.json'
 
 const Articles = (props) => {
+    let order = props.check
+    order = order % 2
     return (
         //  available blue , red green , yellow
-        <div className='body'>
-            <section class="light">
-                <div class="container py-2">
-                    <div class="h1 text-center text-dark" id="pageHeaderTitle">{props.pTitle}</div>
-                    <article class="postcard light blue card-article-1">
+        <div className='body list-child-1'>
+            <section class="light list-child-2">
+                <div class="container py-2 list-child-3">
+                    <div class="h1 text-center text-dark " id="pageHeaderTitle">{props.pTitle}
+                    </div>
+
+                    <div class={order ? "postcard postcard-for light blue" : "postcard postcard-rev light blue"}>
                         <a class="postcard__img_link" href="#">
                             <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
                         </a>
@@ -29,10 +33,10 @@ const Articles = (props) => {
                                 </li>
                             </ul>
                         </div>
-                    </article>
-
-
+                    </div>
                 </div>
+
+
             </section>
         </div>
     )
