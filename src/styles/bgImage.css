@@ -4,7 +4,7 @@
 
 .bgHImg {
   max-height: 500px;
-  width: 100%;
+  min-width: 100%;
 }
 
 .getStartedBtn {
@@ -14,11 +14,11 @@
 .img_title {
   /* margin-top: 17rem; */
   position: absolute;
-  color: red;
+  color: white;
   text-align: center;
   left: 0;
-  right: 4.2%;
-  top: 67%;
+  right: 5%;
+  top: 71%;
   letter-spacing: 3px;
   font-family: "Montez", cursive;
 }

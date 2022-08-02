@@ -10,16 +10,16 @@ const BgImage = () => {
             <div className="box ">
                 <img className="img-responsive img-fluid bgHImg" src={image} alt="bg-pic" />
                 {/* On the image text */}
-                <div className="">
-                    <div className="dropdown font-sans tracking-wider">
-                        <h2>Kounsel</h2>
-                        <p>{slogan}</p>
-                        <Link to="/singup">
-                            <button className="btn getStartedBtn btn-outline-dark " type="button" >
-                                Get Started
-                            </button>
-                        </Link>
-                    </div>
+                <div className="img_title">
+                    {/* <div className="dropdown font-sans tracking-wider"> */}
+                    <h3>Kounsel</h3>
+                    <p>{slogan}</p>
+                    <Link to="/singup">
+                        <button className="btn getStartedBtn btn-outline-dark " type="button" >
+                            Get Started
+                        </button>
+                    </Link>
+                    {/* </div> */}
                 </div>
             </div>
         </>
