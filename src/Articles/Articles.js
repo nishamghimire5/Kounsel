@@ -2,7 +2,6 @@ import '../styles/Articles.css';
 import ArticleData from '../Assets/datas/articles.json'
 
 const Articles = (props) => {
-    console.log(props)
     return (
         //  available blue , red green , yellow
         <div className='body'>
