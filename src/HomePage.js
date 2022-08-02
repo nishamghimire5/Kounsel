@@ -10,7 +10,7 @@ const HomePage = () => {
         <>
             {/* background image in Homepage */}
             <div className="box ">
-                <img className="img-responsive img-fluid bgHImg" src={image} alt="bg-pic" />
+                <img className="img-responsive img-fluid bgHImg " src={image} alt="bg-pic" />
                 {/* On the image text */}
                 <div className="img-title">
                     <div className="dropdown font-sans tracking-wider">
