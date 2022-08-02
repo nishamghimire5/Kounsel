@@ -1,12 +1,12 @@
-import styles from '../styles/Cards.module.css';
+import '../styles/Cards.css';
 import CardData from './CardData';
 import CardInfo from '../Assets/datas/councelling.json';
 //import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Cards = () => {
     let sectionTopText = `We can help you with`;
-    return (<div className={`${styles.Body} body`}>
-        <section className={styles.wrapper}>
+    return (<div>
+        <section className="wrapper">
             <div className="container">
                 <div className="row">
                     <div className="col text-center mb-5">
