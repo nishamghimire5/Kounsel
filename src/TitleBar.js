@@ -10,16 +10,16 @@ const TitleBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
-                        <li className="nav-item active">
+                        <ul className="nav-item active">
                             <Link className="nav-link" to="/">Home <span className="sr-only"></span></Link>
-                        </li>
-                        <li className="nav-item">
+                        </ul>
+                        <ul className="nav-item">
                             <CustomLink className="nav-link" to="/about">About</CustomLink>
-                        </li>
-                        <li className="nav-item">
-                            <CustomLink className="nav-link" to="/articles">Articles</CustomLink>
-                        </li>
-                        <li className="nav-item dropdown">
+                        </ul>
+                        <ul className="nav-item">
+                            <CustomLink className="nav-link" to="/articlesshow">Articles</CustomLink>
+                        </ul>
+                        <ul className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" to='/' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Login
                             </Link>
@@ -29,7 +29,7 @@ const TitleBar = () => {
                                 {/* <div className="dropdown-divider"></div>
                                 <Link className="dropdown-item" to='/'>Something else here</Link> */}
                             </div>
-                        </li>
+                        </ul>
                     </ul>
                 </div>
             </nav>
