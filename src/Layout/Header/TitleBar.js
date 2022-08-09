@@ -25,7 +25,7 @@ const TitleBar = () => {
                             </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <Link className="dropdown-item" to='/signin'>Sign In</Link>
-                                <Link className="dropdown-item" to='/singup'>Sign Up</Link>
+                                <Link className="dropdown-item" to='/signup'>Sign Up</Link>
                                 {/* <div className="dropdown-divider"></div>
                                 <Link className="dropdown-item" to='/'>Something else here</Link> */}
                             </div>
