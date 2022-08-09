@@ -1,6 +1,3 @@
-import { Card } from "react-bootstrap";
-
-
 const CardData = (props) => {
     // let height = { "mix-height": "390px" };
     return (

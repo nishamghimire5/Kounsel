@@ -1,5 +1,5 @@
 import ActiveCoursel from "./ActiveCourosel";
-import Info from './datas/TestimonialInfo.json';
+import Info from '../Assets/datas/TestimonialInfo.json';
 
 const Testimonials = () => {
     return (
@@ -11,7 +11,7 @@ const Testimonials = () => {
                 <div className="carousel-inner" role="listbox">
                     {/* <!--First slide--> */}
                     <div className=""  >
-                        <div className="row">
+                        <div className="row text-dark">
                             {Info.map((test, index) => {
                                 return (<ActiveCoursel key={index} imgLink={test.imgLink} nameInCourosel={test.name} sayInCourosel={test.say} />)
                             }
