@@ -1,5 +1,4 @@
 import '../styles/Articles.css';
-import ArticleData from '../Assets/datas/articles.json'
 
 const Articles = (props) => {
     let order = props.check
