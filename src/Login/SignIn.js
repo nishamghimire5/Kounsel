@@ -3,7 +3,9 @@ import React,{useState} from "react"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import {Link} from 'react-router-dom'
-//import "./SignIn.css"
+import '/home/prekshya/Documents/projects/Kounsel/src/styles/SignIn.css'
+
+{/* <div className = "container"> */}
 
 export default function SignIn() {
     const [email, setEmail] = useState("");
@@ -17,33 +19,34 @@ export default function SignIn() {
     return (
         // <> </> needed to add-in the js code in react
         <>
-        {/* <h1>SignIn</h1>
-        <span>
-            Don't have an account?  
-            <Link to = "/signup">Sign Up</Link>
-        </span>
-        <br />
-        <span><Link to = "/">Go back </Link></span> */}
+            {/* <> </> needed to add-in the js code in react */}
+            <>
+                <h1 className="heading">SignIn</h1>
+                <br />
+                <br />
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group controlId="email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control autoFocus type="email" value={email}
+                            onChange={(e) => setEmail(e.target.value)} />
+                    </Form.Group>
 
-        <div className = "Login">
-            <Form onSubmit={handleSubmit}>
-                <Form.Group size = "lg" controlId="email">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control autoFocus type="email" value={email}
-                    onChange={(e) => setEmail(e.target.value)}/>
-                </Form.Group>
-
-                <Form.Group size = "lg" controlId="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" value={password}
-                    onChange={(e) => setPassword(e.target.value)}/>
-                </Form.Group>
-                <br></br>
-                <Button block size = "lg" type = "submit" disabled = {!validateForm()}>
-                SignIn
-                </Button>
-            </Form>
-        </div>
-        </>
+                    <br />
+                    <br />
+                    <Form.Group controlId="password">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" value={password}
+                            onChange={(e) => setPassword(e.target.value)} />
+                    </Form.Group>
+                    <br></br>
+                    <Button block size="lg" type="submit" disabled={!validateForm()}>
+                        SignIn
+                    </Button>
+                </Form>
+            </><br /><span>
+                Don't have an account?  
+                <Link to="/signup"> Sign Up</Link>
+            </span><br /><span><Link to="/">Go back </Link></span>
+            </>
     );
 }
