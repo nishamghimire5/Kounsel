@@ -12,7 +12,7 @@ const Articles = (props) => {
                     <div class="h1 text-center text-dark " id="pageHeaderTitle">{props.pTitle}
                     </div>
 
-                    <div class={order ? "postcard postcard-for light blue" : "postcard postcard-rev light blue"}>
+                    <div class={order ? `postcard postcard-for light red` : `postcard postcard-rev light green`}>
                         <a class="postcard__img_link" href="#">
                             <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
                         </a>
