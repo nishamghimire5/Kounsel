@@ -10,6 +10,10 @@
 .getStartedBtn {
   background: #dd7448;
 }
+.getStartedBtn:hover {
+  background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
+}
+
 
 .img_title {
   /* margin-top: 17rem; */

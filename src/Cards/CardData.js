@@ -5,8 +5,8 @@ const CardData = (props) => {
             <a href="#">
                 <img className="card-img " src={props.imgLink} alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
                 <div className="card-img-overlay d-flex flex-column">
-                    <div className="card-body ">
-                        <h4 className="card-title mt-0 hower"><a className="text-white card-img" herf="/">{props.textInPic}</a></h4>
+                    <div className="card-body">
+                        <h4 className="card-title mt-0"><a className="card-img" herf="/">{props.textInPic}</a></h4>
                     </div>
                 </div>
             </a>
