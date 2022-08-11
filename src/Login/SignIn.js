@@ -3,7 +3,7 @@ import React,{useState} from "react"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import {Link} from 'react-router-dom'
-import '/home/prekshya/Documents/projects/Kounsel/src/styles/SignIn.css'
+import '../styles/SignIn.css'
 
 {/* <div className = "container"> */}
 
@@ -22,6 +22,7 @@ export default function SignIn() {
             {/* <> </> needed to add-in the js code in react */}
             <>
                 <h1 className="heading">SignIn</h1>
+                
                 <br />
                 <br />
                 <Form onSubmit={handleSubmit}>

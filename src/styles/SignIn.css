@@ -4,3 +4,11 @@
     left: 20px;
     color: rgb(29, 150, 109);
 }
+
+
+img{
+    float:right;
+}
+.form{
+    clear:right
+}
