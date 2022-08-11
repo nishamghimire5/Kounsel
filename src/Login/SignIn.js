@@ -25,10 +25,11 @@ export default function SignIn() {
                 
                 <br />
                 <br />
-                <Form onSubmit={handleSubmit}>
+                <img width = "300" src="https://img.freepik.com/free-vector/notebook-concept-illustration_114360-387.jpg?w=826&t=st=1660200940~exp=1660201540~hmac=1c3efda040d782499db9b0fff61f26d623c6e3e9bc4ebafad2311078dfe62879"></img>
+                <Form class="form" onSubmit={handleSubmit}>
                     <Form.Group controlId="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control autoFocus type="email" value={email}
+                        <Form.Label className="">Email</Form.Label>
+                        <Form.Control className = "w-50" autoFocus type="email" value={email}
                             onChange={(e) => setEmail(e.target.value)} />
                     </Form.Group>
 
@@ -36,7 +37,7 @@ export default function SignIn() {
                     <br />
                     <Form.Group controlId="password">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" value={password}
+                        <Form.Control className = "w-50" type="password" value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </Form.Group>
                     <br></br>
