@@ -29,10 +29,10 @@ export default function SignIn() {
                 
                 <br />
                 <br />
-                <img width = "300" src="https://img.freepik.com/free-vector/notebook-concept-illustration_114360-387.jpg?w=826&t=st=1660200940~exp=1660201540~hmac=1c3efda040d782499db9b0fff61f26d623c6e3e9bc4ebafad2311078dfe62879"></img>
+                <img width = "300" src="https://cdn.dribbble.com/users/1152172/screenshots/4575118/media/216a535c7908cb50a594b19d43dca653.jpg"></img>
                 <Form class="form" onSubmit={handleSubmit}>
                     <Form.Group controlId="text">
-                        <Form.Label>First Name</Form.Label>
+                        <Form.Label className="label">First Name</Form.Label>
                         <Form.Control className = "w-50" autoFocus type="email" value={firstName}
                             onChange={(e) => setFirstName(e.target.value)} />
                     </Form.Group>
@@ -41,7 +41,7 @@ export default function SignIn() {
                     <br />
 
                     <Form.Group controlId="text">
-                        <Form.Label>Last Name</Form.Label>
+                        <Form.Label className="label">Last Name</Form.Label>
                         <Form.Control className = "w-50" autoFocus type="text" value={lastName}
                             onChange={(e) => setLastName(e.target.value)} />
                     </Form.Group>
@@ -50,7 +50,7 @@ export default function SignIn() {
                     <br />
 
                     <Form.Group controlId="text">
-                        <Form.Label>Faculty</Form.Label>
+                        <Form.Label className="label">Faculty</Form.Label>
                         <Form.Control className = "w-50" autoFocus type="text" value={faculty}
                             onChange={(e) => setFaculty(e.target.value)} />
                     </Form.Group>
@@ -59,7 +59,7 @@ export default function SignIn() {
                     <br />
 
                     <Form.Group controlId="text">
-                        <Form.Label>Registration Number</Form.Label>
+                        <Form.Label className="label">Registration Number</Form.Label>
                         <Form.Control className = "w-50" autoFocus type="text" value={regisNo}
                             onChange={(e) => setRegistrationNumber(e.target.value)} />
                     </Form.Group>
@@ -68,7 +68,7 @@ export default function SignIn() {
                     <br />
 
                     <Form.Group controlId="email">
-                        <Form.Label>Email</Form.Label>
+                        <Form.Label className="label">Email</Form.Label>
                         <Form.Control className = "w-50" autoFocus type="email" value={email}
                             onChange={(e) => setEmail(e.target.value)} />
                     </Form.Group>
@@ -78,7 +78,7 @@ export default function SignIn() {
                 
 
                     <Form.Group controlId="password">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className="label">Password</Form.Label>
                         <Form.Control className = "w-50" type="password" value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                     </Form.Group>

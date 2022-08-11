@@ -12,3 +12,7 @@ img{
 .form{
     clear:right
 }
+
+.label{
+    text-align: left;
+}
