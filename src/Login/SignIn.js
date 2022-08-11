@@ -45,10 +45,13 @@ export default function SignIn() {
                         SignIn
                     </Button>
                 </Form>
-            </><br /><span>
+            </><br />
+            <span>
                 Don't have an account?  
                 <Link to="/signup"> Sign Up</Link>
-            </span><br /><span><Link to="/">Go back </Link></span>
+                <br /><br />
+                <Link to="/">Go back </Link>
+            </span>
             </>
     );
 }
