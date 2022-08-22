@@ -1,51 +1,161 @@
 import React from 'react';
-import { Link } from "react-router-dom"
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-  MDBInput
-}
-from 'mdb-react-ui-kit';
+import "../styles/SignUp.css";
+import { Link } from "react-router-dom";
+// import {MDBBtn,MDBContainer,MDBRow,MDBCol,MDBIcon} from 'mdb-react-ui-kit';
+// import {MDBInput}  from 'mdb-react-ui-kit';
 
-function App() {
-  return (
-    <MDBContainer fluid>
-      <MDBRow>
+function SignIn() {
+  return (    
+   <>
+     {/* <!--Main Navigation--> */}
+    
 
-        <MDBCol sm='6'>
+    {/* <!-- bar --> */}
+    <nav class="bar bar-expand-lg bar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        {/* <!-- bar brand --> */}
+        <a class="bar-brand link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <strong>MDB</strong>
+        </a>
+        <button class="bar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#barExample01"
+          aria-controls="barExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse bar-collapse" id="barExample01">
+          <ul class="bar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="link" aria-current="page" href="#intro">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">Learn Bootstrap 5</a>
+            </li>
+            <li class="nav-item">
+              <a class="link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB UI KIT</a>
+            </li>
+          </ul>
 
-          <div className='d-flex flex-row ps-5 pt-5'>
-            <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
-            <span className="h1 fw-bold mb-0">Logo</span>
+          <ul class="bar-nav d-flex flex-row">
+            {/* <!-- Icons --> */}
+            <li class="nav-item me-3 me-lg-0">
+              <a class="link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {/* <!-- bar --> */}
+
+    {/* <!-- Background image --> */}
+    <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-md-8">
+              <form class="bg-white  rounded-5 shadow-5-strong p-5">
+                {/* <!-- Email input --> */}
+                <div class="form-outline mb-4">
+                  <input type="email" id="form1Example1" class="form-control" />
+                  <label class="form-label" for="form1Example1">Email address</label>
+                </div>
+
+                {/* <!-- Password input --> */}
+                <div class="form-outline mb-4">
+                  <input type="password" id="form1Example2" class="form-control" />
+                  <label class="form-label" for="form1Example2">Password</label>
+                </div>
+
+                {/* <!-- 2 column grid layout for inline styling --> */}
+                <div class="row mb-4">
+                  <div class="col d-flex justify-content-center">
+                    {/* <!-- Checkbox --> */}
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                      <label class="form-check-label" for="form1Example3">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col text-center">
+                    {/* <!-- Simple link --> */}
+                    <a href="#!">Forgot password?</a>
+                  </div>
+                </div>
+
+                {/* <!-- Submit button --> */}
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+              </form>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    {/* <!-- Background image --> */}
+  {/* <!--Main Navigation--> */}
 
-          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
+  {/* <!--Footer--> */}
+  <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+      <a role="button" class="btn btn-primary btn-lg m-2"
+        href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
+        Learn Bootstrap 5
+      </a>
+      <a role="button" class="btn btn-primary btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank">
+        Download MDB UI KIT
+      </a>
+    </div>
 
-            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
+    <hr class="m-0" />
 
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formTextExample1' type='text' aria-describedby = 'textExample1' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+    <div class="text-center py-4 align-items-center">
+      <p>Follow MDB on social media</p>
+      <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com/mdbootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/MDBootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/mdbootstrap/mdb-ui-kit" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
 
-            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
-            <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
-            <p className='ms-5'>Don't have an account? <Link className="nav-link" to="/Signup">Register here</Link></p>
-
-          </div>
-
-        </MDBCol>
-
-        <MDBCol sm='6' className='d-none d-sm-block px-0'>
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
-            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
-  );
+    {/* <!-- Copyright --> */}
+    <div class="text-center p-3 copyright">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    {/* <!-- Copyright --> */}
+  </footer>
+  {/* <!--Footer--> */}
+   </>
+    );
 }
 
-export default App;
+export default SignIn;

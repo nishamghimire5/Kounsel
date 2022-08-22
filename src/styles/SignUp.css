@@ -1,5 +1,25 @@
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   .h-custom-2 {
     height: 100%;
     }
-  }
+  } */
+
+      #intro {
+        background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+        height: 100vh;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .bar .link {
+        color: #fff !important;
+      }
+
+      .copyrught{
+        background-color: rgba(0, 0, 0, 0.2);
+      }
