@@ -1,56 +1,98 @@
-import React from 'react';
-import { Link } from "react-router-dom"
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-  MDBInput
+// User state checks the "states" or changes made by the user
+import React,{useState} from "react"
+import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button"
+import {Link} from 'react-router-dom'
+import '../styles/SignIn.css'
+
+export default function SignIn() {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [faculty, setFaculty] = useState("");
+    const [regisNo, setRegistrationNumber] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    function validateForm(){
+        return firstName.length>0 && lastName.length>0 && faculty.length>0 && regisNo.length>0 && email.length>0 && password.length>0;
+    }
+    function handleSubmit(event){
+        event.preventDefault();
+    }
+    return (
+        // <> </> needed to add-in the js code in react
+        <>
+            {/* <> </> needed to add-in the js code in react */}
+            <>
+                <h1 className="heading">SignUp</h1>
+                
+                <br />
+                <br />
+                <img width = "300" src="https://cdn.dribbble.com/users/1152172/screenshots/4575118/media/216a535c7908cb50a594b19d43dca653.jpg"></img>
+                <Form class="form" onSubmit={handleSubmit}>
+                    <Form.Group controlId="text">
+                        <Form.Label className="label">First Name</Form.Label>
+                        <Form.Control className = "w-50" autoFocus type="email" value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)} />
+                    </Form.Group>
+
+                    <br />
+                    <br />
+
+                    <Form.Group controlId="text">
+                        <Form.Label className="label">Last Name</Form.Label>
+                        <Form.Control className = "w-50" autoFocus type="text" value={lastName}
+                            onChange={(e) => setLastName(e.target.value)} />
+                    </Form.Group>
+
+                    <br />
+                    <br />
+
+                    <Form.Group controlId="text">
+                        <Form.Label className="label">Faculty</Form.Label>
+                        <Form.Control className = "w-50" autoFocus type="text" value={faculty}
+                            onChange={(e) => setFaculty(e.target.value)} />
+                    </Form.Group>
+
+                    <br />
+                    <br />
+
+                    <Form.Group controlId="text">
+                        <Form.Label className="label">Registration Number</Form.Label>
+                        <Form.Control className = "w-50" autoFocus type="text" value={regisNo}
+                            onChange={(e) => setRegistrationNumber(e.target.value)} />
+                    </Form.Group>
+
+                    <br />
+                    <br />
+
+                    <Form.Group controlId="email">
+                        <Form.Label className="label">Email</Form.Label>
+                        <Form.Control className = "w-50" autoFocus type="email" value={email}
+                            onChange={(e) => setEmail(e.target.value)} />
+                    </Form.Group>
+
+                    <br />
+                    <br />
+                
+
+                    <Form.Group controlId="password">
+                        <Form.Label className="label">Password</Form.Label>
+                        <Form.Control className = "w-50" type="password" value={password}
+                            onChange={(e) => setPassword(e.target.value)} />
+                    </Form.Group>
+                    <br></br>
+                    <Button block size="lg" type="submit" disabled={!validateForm()}>
+                        SignUp
+                    </Button>
+                </Form>
+            </><br />
+            <span>
+                Already have an account?  
+                <Link to="/signin"> Sign In</Link>
+                <br /><br />
+                <Link to="/">Go back </Link>
+            </span>
+            </>
+    );
 }
-from 'mdb-react-ui-kit';
 
-function App() {
-  return (
-    <MDBContainer fluid>
-      <MDBRow>
-
-        <MDBCol sm='6'>
-
-          <div className='d-flex flex-row ps-5 pt-5'>
-            <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
-            <span className="h1 fw-bold mb-0">Logo</span>
-          </div>
-
-          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
-
-            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Sign Up</h3>
-
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='First Name' id='formControlLg' type='text' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Last Name' id='formControlLg' type='text' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Registration Number' id='formControlLg' type='text' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Faculty' id='formControlLg' type='text' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
-            
-
-            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Sign Up</MDBBtn>
-            {/* <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p> */}
-            <p className='ms-5'>Already have an account? <Link className="nav-link" to="/Signin">Login</Link></p>
-
-          </div>
-
-        </MDBCol>
-
-        <MDBCol sm='6' className='d-none d-sm-block px-0'>
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
-            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
-  );
-}
-
-export default App;
