@@ -1,66 +1,56 @@
-// User state checks the "states" or changes made by the user
-import React,{useState} from "react"
-import Form from "react-bootstrap/Form"
-import Button from "react-bootstrap/Button"
-import {Link} from 'react-router-dom'
-import '../styles/SignUp.css'
-
-{/* <div className = "container"> */}
-
-export default function SignIn() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [faculty, setFaculty] = useState("");
-    const [regisNo, setRegistrationNumber] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    function validateForm(){
-        return firstName.length>0 && lastName.length>0 && faculty.length>0 && regisNo.length>0 && email.length>0 && password.length>0;
-    }
-    function handleSubmit(event){
-        event.preventDefault();
-    }
-    return (
-            <>
-            <div class="bg-img">
-         <div class="content">
-            <header>Login Form</header>
-            <form action="#">
-               <div class="field">
-                  <span class="fa fa-user"></span>
-                  <input type="text" required placeholder="Email or Phone" />
-               </div>
-               <div class="field space">
-                  <span class="fa fa-lock"></span>
-                  <input type="password" class="pass-key" required placeholder="Password" />
-                  <span class="show">SHOW</span>
-               </div>
-               <div class="pass">
-                  <a href="#">Forgot Password?</a>
-               </div>
-               <div class="field">
-                  <input type="submit" value="LOGIN" />
-               </div>
-            </form>
-            <div class="login">
-               Or login with
-            </div>
-            <div class="links">
-               <div class="facebook">
-                  <i class="fab fa-facebook-f"><span>Facebook</span></i>
-               </div>
-               <div class="instagram">
-                  <i class="fab fa-instagram"><span>Instagram</span></i>
-               </div>
-            </div>
-            <div class="signup">
-               Don't have account?
-               <a href="#">Signup Now</a>
-            </div>
-         </div>
-      </div>
-    <div>
-    </div>
-    </>
-    );
+import React from 'react';
+import { Link } from "react-router-dom"
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
 }
+from 'mdb-react-ui-kit';
+
+function App() {
+  return (
+    <MDBContainer fluid>
+      <MDBRow>
+
+        <MDBCol sm='6'>
+
+          <div className='d-flex flex-row ps-5 pt-5'>
+            <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
+            <span className="h1 fw-bold mb-0">Logo</span>
+          </div>
+
+          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
+
+            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Sign Up</h3>
+
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='First Name' id='formControlLg' type='text' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Last Name' id='formControlLg' type='text' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Registration Number' id='formControlLg' type='text' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Faculty' id='formControlLg' type='text' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+            
+
+            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Sign Up</MDBBtn>
+            {/* <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p> */}
+            <p className='ms-5'>Already have an account? <Link className="nav-link" to="/Signin">Login</Link></p>
+
+          </div>
+
+        </MDBCol>
+
+        <MDBCol sm='6' className='d-none d-sm-block px-0'>
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
+        </MDBCol>
+
+      </MDBRow>
+
+    </MDBContainer>
+  );
+}
+
+export default App;

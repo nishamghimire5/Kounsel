@@ -1,4 +1,4 @@
-import styles from '../styles/bgImage.css';
+import '../styles/bgImage.css';
 import image from '../Assets/Images/bgimage.jpg';
 import { Link } from "react-router-dom"
 
@@ -8,7 +8,7 @@ const BgImage = () => {
         <>
             {/* background image in Homepage */}
             <div className="box ">
-                <img className="img-responsive img-fluid bgHImg" src={image} alt="bg-pic" />
+                <img className="img-responsive img-fluid bgHImg" src={image} alt="bg-picj" />
                 {/* On the image text */}
                 <div className="img_title">
                     {/* <div className="dropdown font-sans tracking-wider"> */}
