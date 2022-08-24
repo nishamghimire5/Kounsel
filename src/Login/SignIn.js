@@ -8,14 +8,10 @@ import '../styles/SignUp.css'
 {/* <div className = "container"> */}
 
 export default function SignIn() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [faculty, setFaculty] = useState("");
-    const [regisNo, setRegistrationNumber] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     function validateForm(){
-        return firstName.length>0 && lastName.length>0 && faculty.length>0 && regisNo.length>0 && email.length>0 && password.length>0;
+        return  email.length>0 && password.length>0;
     }
     function handleSubmit(event){
         event.preventDefault();
@@ -24,29 +20,10 @@ export default function SignIn() {
             <>
             <div class="bg-img">
             <div class="content">
-            <header>Sign Up Form</header>
+            <header>Sign In Form</header>
 
             <form action="#">
 
-            <div class="field">
-                <span class="fa fa-user"></span>
-                <input type="text" required placeholder="First Name" />
-            </div>
-
-            <div class="field">
-                <span class="fa fa-user"></span>
-                <input type="text" required placeholder="Last Name" />
-            </div>
-            
-            <div class="field">
-                <span class="fa fa-user"></span>
-                <input type="text" required placeholder="Faculty" />
-            </div>
-            
-            <div class="field">
-                <span class="fa fa-user"></span>
-                <input type="text" required placeholder="Registration Number" />
-            </div>
 
                <div class="field">
                   <span class="fa fa-user"></span>
@@ -61,11 +38,11 @@ export default function SignIn() {
                   <a href="#">Forgot Password?</a>
                </div>
                <div class="field">
-                  <input type="submit" value="SIGN UP" />
+                  <input type="submit" value="SIGN IN" />
                </div>
             </form>
             <div class="login">
-               Or signup with
+               Or signin with
             </div>
             <div class="links">
                <div class="facebook">
@@ -76,8 +53,8 @@ export default function SignIn() {
                </div>
             </div>
             <div class="signup">
-               Already have an account?
-               <a href="#">Login</a>
+               Don't have an account?
+               <a href="/signup">SignUp</a>
             </div>
          </div>
       </div>

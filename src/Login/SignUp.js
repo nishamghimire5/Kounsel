@@ -3,7 +3,9 @@ import React,{useState} from "react"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import {Link} from 'react-router-dom'
-import '../styles/SignIn.css'
+import '../styles/SignUp.css'
+
+{/* <div className = "container"> */}
 
 export default function SignIn() {
     const [firstName, setFirstName] = useState("");
@@ -19,80 +21,68 @@ export default function SignIn() {
         event.preventDefault();
     }
     return (
-        // <> </> needed to add-in the js code in react
-        <>
-            {/* <> </> needed to add-in the js code in react */}
             <>
-                <h1 className="heading">SignUp</h1>
-                
-                <br />
-                <br />
-                <img width = "300" src="https://cdn.dribbble.com/users/1152172/screenshots/4575118/media/216a535c7908cb50a594b19d43dca653.jpg"></img>
-                <Form class="form" onSubmit={handleSubmit}>
-                    <Form.Group controlId="text">
-                        <Form.Label className="label">First Name</Form.Label>
-                        <Form.Control className = "w-50" autoFocus type="email" value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)} />
-                    </Form.Group>
+            <div class="bg-img">
+            <div class="content">
+            <header>Sign Up Form</header>
 
-                    <br />
-                    <br />
+            <form action="#">
 
-                    <Form.Group controlId="text">
-                        <Form.Label className="label">Last Name</Form.Label>
-                        <Form.Control className = "w-50" autoFocus type="text" value={lastName}
-                            onChange={(e) => setLastName(e.target.value)} />
-                    </Form.Group>
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="First Name" />
+            </div>
 
-                    <br />
-                    <br />
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="Last Name" />
+            </div>
+            
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="Faculty" />
+            </div>
+            
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="Registration Number" />
+            </div>
 
-                    <Form.Group controlId="text">
-                        <Form.Label className="label">Faculty</Form.Label>
-                        <Form.Control className = "w-50" autoFocus type="text" value={faculty}
-                            onChange={(e) => setFaculty(e.target.value)} />
-                    </Form.Group>
-
-                    <br />
-                    <br />
-
-                    <Form.Group controlId="text">
-                        <Form.Label className="label">Registration Number</Form.Label>
-                        <Form.Control className = "w-50" autoFocus type="text" value={regisNo}
-                            onChange={(e) => setRegistrationNumber(e.target.value)} />
-                    </Form.Group>
-
-                    <br />
-                    <br />
-
-                    <Form.Group controlId="email">
-                        <Form.Label className="label">Email</Form.Label>
-                        <Form.Control className = "w-50" autoFocus type="email" value={email}
-                            onChange={(e) => setEmail(e.target.value)} />
-                    </Form.Group>
-
-                    <br />
-                    <br />
-                
-
-                    <Form.Group controlId="password">
-                        <Form.Label className="label">Password</Form.Label>
-                        <Form.Control className = "w-50" type="password" value={password}
-                            onChange={(e) => setPassword(e.target.value)} />
-                    </Form.Group>
-                    <br></br>
-                    <Button block size="lg" type="submit" disabled={!validateForm()}>
-                        SignUp
-                    </Button>
-                </Form>
-            </><br />
-            <span>
-                Already have an account?  
-                <Link to="/signin"> Sign In</Link>
-                <br /><br />
-                <Link to="/">Go back </Link>
-            </span>
-            </>
+               <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input type="text" required placeholder="Email or Phone" />
+               </div>
+               <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required placeholder="Password" />
+                  <span class="show">SHOW</span>
+               </div>
+               <div class="pass">
+                  <a href="#">Forgot Password?</a>
+               </div>
+               <div class="field">
+                  <input type="submit" value="SIGN UP" />
+               </div>
+            </form>
+            <div class="login">
+               Or signup with
+            </div>
+            <div class="links">
+               <div class="facebook">
+                  <i class="fab fa-facebook-f"><span>Facebook</span></i>
+               </div>
+               <div class="instagram">
+                  <i class="fab fa-instagram"><span>Instagram</span></i>
+               </div>
+            </div>
+            <div class="signup">
+               Already have an account?
+               <a href="/signin">Login</a>
+            </div>
+         </div>
+      </div>
+    <div>
+    </div>
+    </>
     );
 }
-
