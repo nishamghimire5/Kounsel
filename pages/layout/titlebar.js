@@ -9,7 +9,7 @@ const TitleBar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav">
+                    <ul style={{'width':"30%",'display':'flex', 'justifyContent':"space-between",'listStyle':"none" }}>
                         <li className="nav-item active">
                             <Link className="nav-link" href="/"><a className='sr-only'>Home</a></Link>
                         </li>
@@ -20,7 +20,7 @@ const TitleBar = () => {
                             <Link className="nav-link" href="/articles"><a>Articles</a></Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Login</a></Link>
+                            <Link className="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Login</a></Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <Link className="dropdown-item" href='/signin'><a>Sign in</a></Link>
                                 <Link className="dropdown-item" href='/singup'><a>Sign up</a></Link>
