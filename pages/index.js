@@ -11,7 +11,7 @@ export class index extends Component {
     return (
       <React.Fragment>
         <BgImage />
-        <Cards />
+        
       </React.Fragment>
     )
   }

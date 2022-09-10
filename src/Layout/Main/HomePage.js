@@ -8,9 +8,9 @@ const HomePage = () => {
             {/* background image in Homepage */}
             <BgImage />
             {/* cards of what we can help with section*/}
-            <Cards />
+            
             {/* Testimonials section*/}
-            <Testimonials />
+            
         </>
     );
 }
