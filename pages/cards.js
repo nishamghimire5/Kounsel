@@ -8,8 +8,8 @@ const Cards = () => {
         <section className="wrapper">
             <div className="container">
                 <div className="row">
-                    <div className="col text-center mb-5">
-                        <h1 className="display-4">{sectionTopText}</h1>
+                    <div className="text_style animate__animated animate__backInUp">
+                        <h1 className="text_style">{sectionTopText}</h1>
                         {/* <p className="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p> */}
                     </div>
                 </div>
