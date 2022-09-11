@@ -10,7 +10,7 @@ const BgImage = () => {
 
                  <div style={{ 'width':"50%" }} className="animate__animated animate__backInUp">
                     
-                    <Image src={"https://img.freepik.com/free-vector/alone-concept-illustration_114360-2393.jpg?w=1380&t=st=1662749048~exp=1662749648~hmac=7b2ce9e1174b6b23533f4d14bdc5803d0848b140688ba8b60e10bc056dfcb79a"} 
+                    <Image src="/pages/assets/images/Peace of mind-bro.png" 
                         objectFit='contain' width ={'1900rem'} height={'1900rem'} alt="bg-picj" layout='responsive' />
                     
                 </div> 

@@ -7,7 +7,7 @@ const ArticlesShow = () => {
         <div className='majorListParent'>
             {data.map((send, index) => {
                 // let number = data.findIndex(obj => obj.name == send.title);
-                return (<Articles key={index} check={index} pTitle={send.title} />)
+                return (<Articles key={index} check={index} Title={send.title} />)
             }
             )}
         </div>
