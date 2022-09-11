@@ -10,10 +10,10 @@
         font-family: "Montez", cursive;
  }
 
- .textCouncelor{
-      text-align: right;
-      background-color: #adf5dd;
-      
+ .message{
+  max-width: 79em;
+  position: relative;
+  left: 10%;
  }
 
   .wrapper {
@@ -22,8 +22,15 @@
   
   .position{
     position: relative;
-    left: 10%;
-    top: 100%;
+    left: 200px;
+    top: 700px;
+  }
+
+  .messagePosition{
+    max-width: 1290px;
+    position: relative;
+    left: 200px;
+    top: 1000px;
   }
   .card {
     position: relative;

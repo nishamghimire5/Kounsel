@@ -7,7 +7,7 @@ const nextConfig = {
 module.exports = {
   images: {
     domains:[
-      "img.freepik.com","storyset.com"
+      "img.freepik.com","storyset.com","static.vecteezy.com", "cdn.dribbble.com"
     ],
   },
 }
