@@ -3,7 +3,7 @@ import Info from '/pages/assets/data/TestimonialInfo.json';
 
 const Testimonials = () => {
     return (
-        <div className="container my-5">
+        <div className="container my-5 container1">
             <hr className="my-5" />
             <h1 className="mb-5">Testimonials</h1>
             {/* <!--Carousel Wrapper--> */}

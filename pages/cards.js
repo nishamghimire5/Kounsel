@@ -89,16 +89,15 @@ const Cards = () => {
         </div>
 
         <br/>
-        <br />
+        <br/>
+        <br/>
         <div className= "row position animate__animated animate__backInUp">
         <h1 className='heading2'>Message from the counsellor.</h1>
         <hr className="my-5" />
-        
-        
         <div class="messageBody messageImg message_p message messagePosition">
         <Image src='https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/287165836_2479732775501691_2865023376074217572_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5iWuhg5BoH0AX8DXpup&_nc_oc=AQmT6N5PH9o9tCbApZuHecJGb-LUtYfGT7CX2GaeRdSpiJ-_4H75KqIx_9iY32Ot5ok&tn=V7O4GUNykDFZJZQ-&_nc_ht=scontent.fktm3-1.fna&oh=00_AT_4nwtfK6tRt9UMTaTvy_J-bEnhOTS-XJVofJLqQqq_TA&oe=6323F90D' width="500" height="600" alt='' />
 
-        <p className='messageBody'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo in, impedit quod dicta est facilis consectetur laborum eius vitae <br/>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo in, impedit quod dicta est facilis consectetur laborum eius vitae <br/>
         voluptate asperiores, vel ipsa laboriosam odit esse beatae nesciunt architecto deserunt.</p>
         </div>
         </div>

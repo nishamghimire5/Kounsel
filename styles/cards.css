@@ -26,8 +26,8 @@
 
  .heading2{
   position: relative;
-  left: 10%;
-  top:300px;
+  left: 10px;
+  top:50px;
   letter-spacing: 8px;
   font-family: "Montez", cursive;
  }
@@ -45,8 +45,8 @@
   .messagePosition{
     max-width: 1290px;
     position: relative;
-    left: 200px;
-    top: 900px;
+    left: 10px;
+    top: 50px;
   }
   .card {
     position: relative;
@@ -142,7 +142,8 @@
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
-    font: 500 100%/1.5 system-ui;
+    letter-spacing: 2px;
+    font-family: "Montez", cursive;
   }
   .messageImg {
     max-width: 100%;
