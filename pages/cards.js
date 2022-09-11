@@ -2,6 +2,7 @@ import Image from 'next/image';
 import CardData from './carddata'; 
 import CardInfo from './assets/data/councelling.json';
 import { relative } from 'path';
+
 const Cards = () => {
     let sectionTopText = `We can help you with`;
     return (
@@ -9,7 +10,7 @@ const Cards = () => {
         <div className= "row position animate__animated animate__backInUp">
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
                 <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -18,7 +19,7 @@ const Cards = () => {
 
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -27,7 +28,7 @@ const Cards = () => {
 
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -36,7 +37,7 @@ const Cards = () => {
 
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -49,7 +50,7 @@ const Cards = () => {
         <div className= "row position animate__animated animate__backInUp">
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -58,7 +59,7 @@ const Cards = () => {
 
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -67,7 +68,7 @@ const Cards = () => {
 
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -76,7 +77,7 @@ const Cards = () => {
 
         <div class="col-sm-2">
         <div class="card" style={{width: 18 +'rem'}}>
-            <Image src="/pages/assets/images/Contemplating-bro.png" class="card-img-top" alt="..." layout='fill'/>
+            <Image src="" class="card-img-top" alt="..." layout='fill'/>
             <div class="card-body">
             <h5 class="card-title">Meet the councelor</h5>
             </div>
@@ -87,19 +88,16 @@ const Cards = () => {
         <br/>
         <br />
 
-        <div class="w-75 p-3" style={{marginRight : 5+'em'}}>
-            <div class ="">
-            <h3> Message from the councelor</h3>
-            <Image src="" layout='fill' />
-            <div class="textCouncelor">
-                <p>Bla bla bla bla bla<br/>
-                Bla bla bla bla bla<br/>
-                Bla bla bla bla bla<br/>
-                Bla bla bla bla bla<br/>
-                </p>
+        <div class="card bg-dark text-white" style={{ MarginLeft: 11 + 'em', maxWidth: 22 + 'em'}} >
+            <Image class="card-img" src="" alt="Card image" layout="fill"/>
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
             </div>
             </div>
-        </div>
+
+
         </>
     );
 }

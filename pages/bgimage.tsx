@@ -6,11 +6,11 @@ const BgImage = () => {
     return (
         <>
             {/* background image in Homepage */}
-            <div style={{ 'height': "60vh", 'width': '100%', 'display':'block' }}>
+            <div style={{ 'height': "60vh", 'width': '100%', 'display':'block', marginLeft: 10 +'em'}}>
 
                  <div style={{ 'width':"50%" }} className="animate__animated animate__backInUp">
                     
-                    <Image src="/pages/assets/images/Peace of mind-bro.png" 
+                    <Image src="" 
                         objectFit='contain' width ={'1900rem'} height={'1900rem'} alt="bg-picj" layout='responsive' />
                     
                 </div> 

@@ -1,5 +1,5 @@
 import ActiveCoursel from "./ActiveCourosel";
-import Info from '../Assets/datas/TestimonialInfo.json';
+import Info from '/pages/assets/data/TestimonialInfo.json';
 
 const Testimonials = () => {
     return (
