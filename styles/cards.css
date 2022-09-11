@@ -16,6 +16,22 @@
   left: 10%;
  }
 
+ .heading1{
+  position: relative;
+  left: 10%;
+  top:600px;
+  letter-spacing: 8px;
+  font-family: "Montez", cursive;
+ }
+
+ .heading2{
+  position: relative;
+  left: 10%;
+  top:300px;
+  letter-spacing: 8px;
+  font-family: "Montez", cursive;
+ }
+
   .wrapper {
     margin: 10vh;
   }
@@ -23,14 +39,14 @@
   .position{
     position: relative;
     left: 200px;
-    top: 700px;
+    top: 600px;
   }
 
   .messagePosition{
     max-width: 1290px;
     position: relative;
     left: 200px;
-    top: 1000px;
+    top: 900px;
   }
   .card {
     position: relative;
@@ -116,4 +132,31 @@
   .card-img:hover{
     color: rgb(6, 249, 99);
     font-weight: bolder;
+  }
+
+  .messageBody {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+  }
+  .messageImg {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 650px) {
+    .messageBody {
+      display: block;
+      font-size: 80%;
+    }
+    .message_p {
+      position: relative;
+      margin: -3rem 0 2rem 1rem;
+      padding: 1rem;
+      background: rgba(white, 0.8);
+    }
   }

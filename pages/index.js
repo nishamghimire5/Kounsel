@@ -10,6 +10,8 @@ export class index extends Component {
       <React.Fragment>
         <BgImage />
         <Cards />
+        {/* <Testimonials /> */}
+        {/* <FooterPage /> */}
       </React.Fragment>
     )
   }
