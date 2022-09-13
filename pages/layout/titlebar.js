@@ -7,10 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const TitleBar = () => {
-    return (
+    return (<div className="text_spacing">
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#">Kounsel</Navbar.Brand>
+                <Link href="/"><a className="text-decoration-none text-dark fs-3 fw-bold">Kounsel</a></Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -19,16 +19,16 @@ const TitleBar = () => {
                         navbarScroll
                     >
                         <Link href="/">
-                            <a className='text-decoration-none text-dark mx-4' href="">Home</a>
+                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Home</a>
                         </Link>
                         <Link href="/about">
-                            <a className='text-decoration-none text-dark mr-4' href="">About</a>
+                            <a className='text-decoration-none text-dark mr-4 fs-6' href="">About</a>
                         </Link>
                         <Link href="/articles">
-                            <a className='text-decoration-none text-dark mx-4' href="">Articles</a>
+                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Articles</a>
                         </Link>
                         <Link href="/signin">
-                            <a className='text-decoration-none text-dark mr-4' href="">Login</a>
+                            <a className='text-decoration-none text-dark mr-4 fs-6' href="">Login</a>
                         </Link>
                         {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
@@ -44,6 +44,7 @@ const TitleBar = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+    </div>
     )
     //     return (
     //         <>

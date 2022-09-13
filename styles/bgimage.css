@@ -2,6 +2,10 @@
     position: relative;
   }
   
+.text_spacing{
+  letter-spacing: 2px; 
+}
+
   .bgHImg {
     max-height: 450px;
     min-width: 100%;
