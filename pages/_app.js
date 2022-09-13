@@ -3,16 +3,28 @@ import '../styles/cards.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/bgimage.css';
 import '../styles/articles.css';
+import '../styles/profile.css';
 import Layout from './layout/layout';
+import { useEffect } from 'react';
+import Head from 'next/head';
 import {SessionProvider} from 'next-auth/react';
 
 function MyApp({ Component, pageProps, session }) {
+  useEffect(() => {
+    typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null
+}, [])
   return (
+    <>
+    <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
+      
     <SessionProvider session={session}>
     <Layout >
         <Component {...pageProps} />
     </Layout>
     </SessionProvider>
+    </>
   )
 }
 
