@@ -16,7 +16,7 @@ const BgImage = () => {
                 {/* </div> */}
                 {/* </div>  */}
                 {/* On the image text */}
-                <div className="img_title">
+                <div className="img_title fs-3">
                     {/* <div style={{ 'position': 'absolute', 'top': '50vh' }} className="img_title"> */}
                     {/* <div className="dropdown font-sans tracking-wider"> */}
                     <h3>Kounsel</h3>
