@@ -19,6 +19,9 @@ const TitleBar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" href="/articles"><a>Articles</a></Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" href="/dashboard"><a>Dashboard</a></Link>
+                        </li>
                         <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Login</a></Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">

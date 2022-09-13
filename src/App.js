@@ -7,6 +7,7 @@ import Articles from './Articles/Articles'
 import SignIn from './Login/SignIn'
 import SignUp from './Login/SignUp'
 import FooterPage from './Layout/Footer/FooterPage'
+import Dashboard from './Dashboard'
 import './App.css';
 
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route exact path="/articles" element={<Articles />} />
           <Route exact path="/signin" element={<SignIn />} />
           <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
       {/* Homepage
