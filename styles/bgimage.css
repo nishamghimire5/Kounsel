@@ -3,7 +3,7 @@
   }
   
   .bgHImg {
-    max-height: 500px;
+    max-height: 450px;
     min-width: 100%;
   }
   
@@ -14,13 +14,13 @@
     background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
   }
 
-  p{
+  /* p{
     color:black ;
   }
-  
+   */
   
   .img_title {
-    /* margin-top: 17rem; */
+    margin-top: 10px;
     position: absolute;
     color: white;
     text-align: center;
@@ -29,5 +29,6 @@
     top: 71%;
     letter-spacing: 3px;
     font-family: "Montez", cursive;
+    z-index: 999;
   }
   
