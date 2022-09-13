@@ -15,7 +15,7 @@ A brief description of how the project should be initialized :
 #### Then in the terminal, type:
 ```bash
   npm install
-  npm start
+  npm run dev
 ```
 > Note: `--If you wish to contribute` create and send a pull request.
 
