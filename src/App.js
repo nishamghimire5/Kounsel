@@ -9,10 +9,13 @@ import SignUp from './Login/SignUp'
 import FooterPage from './Layout/Footer/FooterPage'
 import Dashboard from './Dashboard'
 import './App.css';
-
+import {useEffect} from "react";
 
 
 const App = () => {
+  useEffect(() => {
+    typeof document !== undefined ? require('./bootstrap/dist/js/bootstrap') : null
+}, [])
   return (
     <div className="App">
       {/* navigation bar */}
