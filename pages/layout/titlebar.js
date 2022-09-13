@@ -5,10 +5,10 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {useSession, signIn, signOut} from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 const TitleBar = () => {
-    const {data: session, status} = useSession();
+    const { data: session, status } = useSession();
     return (<div className="text_spacing">
         <Navbar bg="light" expand="lg">
             <Container fluid>
@@ -29,27 +29,24 @@ const TitleBar = () => {
                         <Link href="/articles">
                             <a className='text-decoration-none text-dark mx-4 fs-6' href="">Articles</a>
                         </Link>
-<<<<<<< HEAD
                         {status === "authenticated" &&
-                        <Link href="/profile">
-                            <a className='text-decoration-none text-dark mr-4 fs-6' href="">My Profile </a>
-                        </Link>}
+                            <Link href="/profile">
+                                <a className='text-decoration-none text-dark mr-4 fs-6' href="">My Profile </a>
+                            </Link>}
                         {status === "authenticated" &&
-                        <Link href="">
-                            <a className='text-decoration-none text-dark ml-4 mr-4 fs-6' href="" onClick={()=> signOut()}>Logout {session.user.name}</a>
-                        </Link>}
+                            <Link href="">
+                                <a className='text-decoration-none text-dark ml-4 mr-4 fs-6' href="" onClick={() => signOut()}>Logout {session.user.name}</a>
+                            </Link>}
                         {status === "unauthenticated" &&
-                        <Link href="">
-                            <a className='text-decoration-none text-dark mr-4 fs-6' href="" onClick={()=> signIn('google')}>Login</a>
-                        </Link>}
-=======
+                            <Link href="">
+                                <a className='text-decoration-none text-dark mr-4 fs-6' href="" onClick={() => signIn('google')}>Login</a>
+                            </Link>}
                         <Link href="/login">
                             <a className='text-decoration-none text-dark fs-6' href="">Login</a>
                         </Link>
                         <Link href="/messenger">
                             <a className='text-decoration-none text-dark mx-4 fs-6' href="">Chat</a>
                         </Link>
->>>>>>> 5415ab442c8a95c109572c870ce2c1c472bb73bb
                         {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
