@@ -15,11 +15,9 @@ A brief description of how the project should be initialized :
 #### Then in the terminal, type:
 ```bash
   npm install
-<<<<<<< HEAD
   npm dev start
 =======
   npm run dev
->>>>>>> aayu
 ```
 > Note: `--If you wish to contribute` create and send a pull request.
 
