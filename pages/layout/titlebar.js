@@ -29,6 +29,7 @@ const TitleBar = () => {
                         <Link href="/articles">
                             <a className='text-decoration-none text-dark mx-4 fs-6' href="">Articles</a>
                         </Link>
+<<<<<<< HEAD
                         {status === "authenticated" &&
                         <Link href="/profile">
                             <a className='text-decoration-none text-dark mr-4 fs-6' href="">My Profile </a>
@@ -41,6 +42,14 @@ const TitleBar = () => {
                         <Link href="">
                             <a className='text-decoration-none text-dark mr-4 fs-6' href="" onClick={()=> signIn('google')}>Login</a>
                         </Link>}
+=======
+                        <Link href="/login">
+                            <a className='text-decoration-none text-dark fs-6' href="">Login</a>
+                        </Link>
+                        <Link href="/messenger">
+                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Chat</a>
+                        </Link>
+>>>>>>> 5415ab442c8a95c109572c870ce2c1c472bb73bb
                         {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
