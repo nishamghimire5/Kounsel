@@ -9,10 +9,7 @@ export default function Dashboard({user}) {
       
         <p className="fs-5 lead" style={{margin: "20px"} }>
             The website will provide counselling services to individuals of Kathmandu University who are experiencing difficulties in their lives. The website will offer a range of services including booking an appintment, online counselling, and many more. 
-            The website will also provide information on a range of topics such as mental health, relationships, and grief.
-            <Link href="/about">
-            <a href="" className="button1"> Read More</a>
-            </Link>           
+            The website will also provide information on a range of topics such as mental health, relationships, and grief. <Link href="/about"><a href="" className="button1">Read More</a></Link>           
         </p>
         <div className="d-grid gap-2">
             <button className="d-grid gap-2 col-6 mx-auto" type="button">Book an appintment</button>
