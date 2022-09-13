@@ -1,0 +1,38 @@
+.box {
+  position: relative;
+}
+
+.text_spacing {
+  letter-spacing: 2px;
+}
+
+.bgHImg {
+  max-height: 450px;
+  min-width: 100%;
+}
+
+.getStartedBtn {
+  background: #dd7448;
+}
+
+.getStartedBtn:hover {
+  background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
+}
+
+/* p{
+    color:black ;
+  }
+   */
+
+.img_title {
+  margin-top: 10px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  left: 0;
+  right: 6.3%;
+  top: 72%;
+  letter-spacing: 3px;
+  font-family: "Montez", cursive;
+  z-index: 999;
+}
