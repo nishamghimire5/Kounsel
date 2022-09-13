@@ -126,10 +126,9 @@ export default function Messenger() {
                             <div className="chatBoxBottom">
                                 <textarea
                                     className="chatMessageInput"
-                                    placeholder="Enter your message."
+                                    placeholder="Write you message here..."
                                     onChange={(e) => setNewMessage(e.target.value)}
-                                    // value={newMessage}
-                                    value="Enter your message here."
+                                    value={newMessage}
                                 ></textarea>
                                 <button className="chatSubmitButton" onClick={handleSubmit}>
                                     Send
