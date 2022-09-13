@@ -9,29 +9,25 @@ import "../styles/conversation.css";
 import '../styles/articles.css';
 import '../styles/profile.css';
 import Layout from './layout/layout';
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import Head from 'next/head';
-import {SessionProvider} from 'next-auth/react';
-=======
 import { SessionProvider } from 'next-auth/react';
->>>>>>> 5415ab442c8a95c109572c870ce2c1c472bb73bb
 
 function MyApp({ Component, pageProps, session }) {
   useEffect(() => {
     typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null
-}, [])
+  }, [])
   return (
     <>
-    <Head>
+      <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      
-    <SessionProvider session={session}>
-      <Layout >
-        <Component {...pageProps} />
-      </Layout>
-    </SessionProvider>
+
+      <SessionProvider session={session}>
+        <Layout >
+          <Component {...pageProps} />
+        </Layout>
+      </SessionProvider>
     </>
   )
 }
