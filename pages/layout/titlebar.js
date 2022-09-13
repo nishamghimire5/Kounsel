@@ -27,8 +27,11 @@ const TitleBar = () => {
                         <Link href="/articles">
                             <a className='text-decoration-none text-dark mx-4 fs-6' href="">Articles</a>
                         </Link>
-                        <Link href="/signin">
-                            <a className='text-decoration-none text-dark mr-4 fs-6' href="">Login</a>
+                        <Link href="/login">
+                            <a className='text-decoration-none text-dark fs-6' href="">Login</a>
+                        </Link>
+                        <Link href="/messenger">
+                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Chat</a>
                         </Link>
                         {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
