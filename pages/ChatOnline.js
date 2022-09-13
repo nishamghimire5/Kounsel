@@ -42,7 +42,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
                         //         ? PF + o.profilePicture
                         //         : PF + "person/noAvatar.png"
                         // }
-                        alt=""
+                        alt="this is photuuu"
                     />
                     <div className="chatOnlineBadge"></div>
                 </div>

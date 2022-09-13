@@ -126,9 +126,10 @@ export default function Messenger() {
                             <div className="chatBoxBottom">
                                 <textarea
                                     className="chatMessageInput"
-                                    placeholder="write something..."
+                                    placeholder="Enter your message."
                                     onChange={(e) => setNewMessage(e.target.value)}
-                                    value={newMessage}
+                                    // value={newMessage}
+                                    value="Enter your message here."
                                 ></textarea>
                                 <button className="chatSubmitButton" onClick={handleSubmit}>
                                     Send
@@ -146,9 +147,11 @@ export default function Messenger() {
                 <div className="chatOnline">
                     <div className="chatOnlineWrapper">
                         <ChatOnline
-                            onlineUsers={onlineUsers}
+                            // onlineUsers={onlineUsers}
+                            onlineUsers="45"
                             // currentId={user._id}
-                            setCurrentChat={setCurrentChat}
+                            // setCurrentChat={setCurrentChat}
+                            setCurrentChat="2"
                         />
                     </div>
                 </div>
