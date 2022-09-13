@@ -1,14 +1,11 @@
 import Image from 'next/image';
-import CardData from './carddata'; 
-import CardInfo from './assets/data/councelling.json';
-import { relative } from 'path';
 
 const Cards = () => {
-    let sectionTopText = `We can help you with`;
+    let sectionTopText = `Our Services.`;
     return (
         <>
 
-        <h1 class="heading1">Our Services.</h1>
+        <h1 class="heading1">{sectionTopText}</h1>
         <div className= "row position animate__animated animate__backInUp">
         <hr className="my-5" />
         <div class="col-sm-2">
