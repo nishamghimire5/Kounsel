@@ -32,6 +32,10 @@
   font-family: "Montez", cursive;
  }
 
+<<<<<<< HEAD
+=======
+  /* Created with https://www.css-gradient.com */
+>>>>>>> d6edd3f3d6df09f39215c9d7cdec8c1ab055f8e4
   .wrapper {
     margin: 10vh;
   }
@@ -53,7 +57,7 @@
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 25px;
     min-height: 325px;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   }

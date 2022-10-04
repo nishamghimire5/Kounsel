@@ -1,4 +1,5 @@
 .box {
+<<<<<<< HEAD
     position: relative;
   }
   
@@ -56,10 +57,32 @@
   }
 }
   
+=======
+  position: relative;
+}
 
-  p{
+.text_spacing {
+  letter-spacing: 2px;
+}
+>>>>>>> d6edd3f3d6df09f39215c9d7cdec8c1ab055f8e4
+
+.bgHImg {
+  max-height: 450px;
+  min-width: 100%;
+}
+
+.getStartedBtn {
+  background: #dd7448;
+}
+
+.getStartedBtn:hover {
+  background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
+}
+
+/* p{
     color:black ;
   }
+<<<<<<< HEAD
   
   
   .img_title {
@@ -74,3 +97,19 @@
     font-family: "Montez", cursive;
   }
   
+=======
+   */
+
+.img_title {
+  margin-top: 10px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  left: 0;
+  right: 6.3%;
+  top: 72%;
+  letter-spacing: 3px;
+  font-family: "Montez", cursive;
+  z-index: 999;
+}
+>>>>>>> d6edd3f3d6df09f39215c9d7cdec8c1ab055f8e4
