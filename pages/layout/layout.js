@@ -6,7 +6,7 @@ export default function Layout({children}) {
         <>
             <TitleBar />
             <main>{children}</main>
-            {/* <FooterPage /> */}
+            <FooterPage />
         </>
     )
 }

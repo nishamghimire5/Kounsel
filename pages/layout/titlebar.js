@@ -1,56 +1,40 @@
 import Link from 'next/link'
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {useSession, signIn, signOut} from 'next-auth/react';
 
 const TitleBar = () => {
-    const {data: session, status} = useSession();
-    return (<div className="text_spacing">
-        <Navbar bg="light" expand="lg">
-            <Container fluid>
-                <Link href="/"><a className="text-decoration-none text-dark fs-3 fw-bold">Kounsel</a></Link>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        {status === "authenticated" &&
-                        <Link href="/dashboard">
-                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Dashboard</a>
-                        </Link>}
-                        {status === "unauthenticated" &&
-                        <Link href="/">
-                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Home</a>
-                        </Link>}
-                        <Link href="/about">
-                            <a className='text-decoration-none text-dark mr-4 fs-6' href="">About</a>
-                        </Link>
-                        <Link href="/articles">
-                            <a className='text-decoration-none text-dark mx-4 fs-6' href="">Articles</a>
-                        </Link>
-                        {status === "authenticated" &&
-                        <Link href="/profile">
-                            <a className='text-decoration-none text-dark mr-4 fs-6' href="">My Profile </a>
-                        </Link>}
-                        {status === "authenticated" &&
-                        <Link href="">
-                            <a className='text-decoration-none text-dark ml-4 mr-4 fs-6' href="" onClick={()=> signOut({callbackUrl: '/'})}>Logout {session.user.name}</a>
-                        </Link>}
-                        {status === "unauthenticated" &&
-                        <Link href="">
-                            <a className='text-decoration-none text-dark mr-4 fs-6' href="" onClick={()=> signIn('google', {callbackUrl: '/dashboard'})}>Login</a>
-                        </Link>}
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    </div>
+    return (
+        <>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light p-3">
+                <p className="navbar-brand">Kounsel</p>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul style={{'width':"30%",'display':'flex', 'justifyContent':"space-between",'listStyle':"none" }}>
+                        <li className="nav-item active">
+                            <Link className="nav-link" href="/"><a className='sr-only'>Home</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" href="/about"><a>About</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" href="/articles"><a>Articles</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" href="/dashboard"><a>Dashboard</a></Link>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link dropdown-toggle" href="/login" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Login</a></Link>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link className="dropdown-item" href='/signin'><a>Sign in</a></Link>
+                                <Link className="dropdown-item" href='/singup'><a>Sign up</a></Link>
+                                {/* <div className="dropdown-divider"></div>
+                                <Link className="dropdown-item" to='/'>Something else here</Link> */}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </>
     )
 }
 export default TitleBar;

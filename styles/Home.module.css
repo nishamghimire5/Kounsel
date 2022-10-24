@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+.container {
+  padding: 0 2rem;
+}
+
+>>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -8,10 +15,13 @@
   align-items: center;
 }
 
+<<<<<<< HEAD
 .container {
   padding: 0 10rem;
 }
 
+=======
+>>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
 .footer {
   display: flex;
   flex: 1;

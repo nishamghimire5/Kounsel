@@ -1,5 +1,8 @@
 .box {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
     position: relative;
   }
   
@@ -8,6 +11,7 @@
     min-width: 100%;
   }
   
+<<<<<<< HEAD
 .getStartedBtn {
   background-color: transparent;
   border: 1px solid #26b67a;
@@ -83,11 +87,24 @@
     color:black ;
   }
 <<<<<<< HEAD
+=======
+  .getStartedBtn {
+    background: #dd7448;
+  }
+  .getStartedBtn:hover {
+    background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
+  }
+
+  p{
+    color:black ;
+  }
+>>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
   
   
   .img_title {
     /* margin-top: 17rem; */
     position: absolute;
+<<<<<<< HEAD
     color: rgb(0, 0, 0);
     text-align: right;
     left: 0;
@@ -113,3 +130,14 @@
   z-index: 999;
 }
 >>>>>>> aayu
+=======
+    color: white;
+    text-align: center;
+    left: 0;
+    right: 5%;
+    top: 71%;
+    letter-spacing: 3px;
+    font-family: "Montez", cursive;
+  }
+  
+>>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d

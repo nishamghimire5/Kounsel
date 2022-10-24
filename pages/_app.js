@@ -15,23 +15,21 @@ import {SessionProvider} from 'next-auth/react';
 import Head from "next/head";
 import Script from "next/script";
 import { useEffect } from 'react';
+import '../styles/articles.css';
+import Layout from './layout/layout';
+import {useEffect} from "react";
+import {SessionProvider} from 'next-auth/react';
 
 function MyApp({ Component, pageProps, session }) {
   useEffect(() => {
     typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null
-  }, [])
+}, [])
   return (
-    <>
-      <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
-
-      <SessionProvider session={session}>
-        <Layout >
-          <Component {...pageProps} />
-        </Layout>
-      </SessionProvider>
-    </>
+    <SessionProvider session={session}>
+    <Layout >
+        <Component {...pageProps} />
+    </Layout>
+    </SessionProvider>
   )
 }
 
