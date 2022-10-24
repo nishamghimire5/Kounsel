@@ -14,11 +14,8 @@ import Layout from './layout/layout';
 import {SessionProvider} from 'next-auth/react';
 import Head from "next/head";
 import Script from "next/script";
-import { useEffect } from 'react';
-import '../styles/articles.css';
 import Layout from './layout/layout';
 import {useEffect} from "react";
-import {SessionProvider} from 'next-auth/react';
 
 function MyApp({ Component, pageProps, session }) {
   useEffect(() => {
