@@ -1,5 +1,4 @@
-<<<<<<< HEAD
- .text_style{
+.text_style{
         margin-top: 17rem;
         position: absolute;
         color: rgb(0, 0, 0);
@@ -33,20 +32,13 @@
   font-family: "Montez", cursive;
  }
 
-<<<<<<< HEAD
-=======
-  /* Created with https://www.css-gradient.com */
->>>>>>> aayu
-=======
 
   /* Created with https://www.css-gradient.com */
   
->>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
   .wrapper {
     margin: 10vh;
   }
   
-<<<<<<< HEAD
   .position{
     position: relative;
     left: 200px;
@@ -59,26 +51,16 @@
     left: 10px;
     top: 50px;
   }
-=======
->>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
   .card {
     position: relative;
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     overflow: hidden;
-<<<<<<< HEAD
-    border-radius: 25px;
-    min-height: 325px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  }
-  @media (max-width: 500px) {
-=======
     border-radius: 20px;
     min-height: 325px;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 768px) {
->>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d
     .card {
       min-height: 350px;
     }
@@ -154,7 +136,6 @@
     color: rgb(6, 249, 99);
     font-weight: bolder;
   }
-<<<<<<< HEAD
 
   .messageBody {
     display: grid;
@@ -183,7 +164,6 @@
       background: rgba(white, 0.8);
     }
   }
-=======
   /* to bring the blue mask over the pictures or cards */
   /* .card .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -198,4 +178,3 @@
   /* img.card-img {
     z-index: 999;
   }  */
->>>>>>> 9ecfdfe771989c96732f7f1413fd976997016d3d

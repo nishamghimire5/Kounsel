@@ -1,25 +1,31 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import FooterPage from './layout/footer';
 const Dashboard = () => {
-    return (<>
+    return (
+    <>
+    <h1>Welcome to your dashboard!</h1>
+    <div class="dashboard-img">
+        <Image src = "https://cdn.dribbble.com/users/1247975/screenshots/17462231/media/64934ea29a7e71f715262fbe111fdce8.jpg?compress=1&resize=1200x900&vertical=top" width="350px" height = "350px" layout="fixed" class="dashboard-img-shape" alt="profile picture"/>
+    </div>
 
-      <p class="fw-bold fs-1 text-center">Welcome User</p>
-      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHdlbGxuZXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="rounded mx-auto d-block" alt="..."></img>
-      
-        <p class="fs-5 lead" style={{margin: "20px"} }>
-            The website will provide counselling services to individuals of Kathmandu University who are experiencing difficulties in their lives. The website will offer a range of services including booking an appintment, online counselling, and many more. 
-            The website will also provide information on a range of topics such as mental health, relationships, and grief. 
-            <Link href="/about">
-            <a href="/about" class="button1">Read More</a>
-            </Link>           
+    <div class="dashboard-text">
+        <p>The website will provide counselling services to individuals of Kathmandu University
+            who are experiencing difficulties in their lives. The website will offer a range of
+            services including booking an appointment, online counselling, and many more. The website
+            will also provide information on a range of topics such as mental health, relationships, and
+            grief. <Link href="/about"><a>Read More</a></Link>
         </p>
-        <div class="d-grid gap-2">
-            <button class="d-grid gap-2 col-6 mx-auto" type="button">Book an appintment</button>
-            <br></br>
-            <button class="d-grid gap-2 col-6 mx-auto" type="button">Chat with the counsellor</button>
-        </div>
+    </div>
 
-
-    </>)
+    <Link href="/chat"><a><button class="counselor-chat-button">Chat with the counselor</button></a></Link>
+    <Link href="/book"><a><button class="appointment-book-button">Book an appointment</button></a></Link>
+    
+    <div class='footer-position'>
+        <FooterPage />
+    </div>
+    </>
+    )
 }
 
 export default Dashboard;

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import bgimage from './bgimage.jpg'
+// import bgimage from './bgimage.jpg'
 import Image from 'next/image'
 
 const BgImage = () => {
@@ -10,8 +10,8 @@ const BgImage = () => {
             <div style={{ 'height': "60vh", 'width': '100%', 'display':'block' }}>
 
                  <div style={{ 'width':"100%" }}>
-                    <Image src={bgimage} 
-                        objectFit='contain' height={'1900rem'} alt="bg-picj" />
+                    {/* <Image src={bgimage}  */}
+                        {/* objectFit='contain' height={'1900rem'} alt="bg-picj" /> */}
                 </div> 
 
                 {/* On the image text */}

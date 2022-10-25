@@ -10,6 +10,7 @@ const FooterPage = () => {
     return (
         <div className="">
             {/* <!-- Footer --> */}
+            <div class = "footer-position">
             <footer className="text-center text-lg-start bg-light text-muted">
                 {/* <!-- Section: Social media --> */}
                 <section
@@ -115,6 +116,7 @@ const FooterPage = () => {
                 {/* <!-- Copyright --> */}
             </footer>
             {/* <!-- Footer --> */}
+        </div>
         </div>
     );
 };
