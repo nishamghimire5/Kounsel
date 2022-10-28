@@ -29,6 +29,27 @@ h1{
   position: relative;
   top: 10rem;
 }
+
+.left-aligned-img{
+  position: relative;
+  top: 7rem;
+  float:left;
+}
+
+.body-text{
+  position: relative;
+  width: 920px;
+  height: 298px;
+  left: 14.85rem;
+  top: 10rem;
+  color: #000000;
+  font-family: 'Barlow', 'san-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 38px;
+  color: #000000;
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

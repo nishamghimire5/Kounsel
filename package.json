@@ -46,5 +46,30 @@
     "eslint-config-next": "12.2.5",
     "typescript": "4.8.3",
     "prisma": "^4.4.0"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishamghimire5/Kounsel.git"
+  },
+  "keywords": [
+    "MentalHealth",
+    "WebDev",
+    "Webapp",
+    "next",
+    "nodejs",
+    "express",
+    "socket.io",
+    "KathmanduUniversity",
+    "Kounsel",
+    "Counselling",
+    "Counselor"
+  ],
+  "author": "Prekshya Dawadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishamghimire5/Kounsel/issues"
+  },
+  "homepage": "https://github.com/nishamghimire5/Kounsel#readme"
 }
