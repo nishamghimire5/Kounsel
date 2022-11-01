@@ -67,7 +67,7 @@ export default function Bookings({ initialBookings }) {
     }
 
     return (
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
