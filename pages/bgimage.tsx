@@ -9,10 +9,6 @@ const BgImage = () => {
             <div style={{ 'height': "60vh", 'width': '100%', 'display':'block', marginLeft: 10 +'em'}}>
 
                  <div style={{ 'width':"50%" }} className="animate__animated animate__backInUp">
-                    
-                    <Image src="https://static.vecteezy.com/system/resources/previews/000/364/016/original/mental-health-concept-vector.jpg" 
-                        objectFit='contain' width ={'1900rem'} height={'1900rem'} alt="bg-picj" layout='responsive' />
-                    
                 </div> 
 
                 {/* On the image text */}

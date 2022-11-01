@@ -1,3 +1,8 @@
+
+import {AiFillFacebook} from 'react-icons/ai'
+import {AiFillInstagram,AiFillTwitterCircle} from 'react-icons/ai'
+
+
 const FooterPage = () => {
     let aboutKounsel = `Kounsel is a project by 3rd sem CS students to initiate a platform 
         for students to share their feelings and discuss their mental problems without the fear 
@@ -5,6 +10,7 @@ const FooterPage = () => {
     return (
         <div className="">
             {/* <!-- Footer --> */}
+            <div class = "footer-position">
             <footer className="text-center text-lg-start bg-light text-muted">
                 {/* <!-- Section: Social media --> */}
                 <section
@@ -18,26 +24,10 @@ const FooterPage = () => {
                     {/* <!-- Left --> */}
 
                     {/* <!-- Right --> */}
-                    <div>
-                        
-                        <a href="#" className="me-4 text-reset">
-                            <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" className="me-4 text-reset">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" className="me-4 text-reset">
-                            <i className="fab fa-google"></i>
-                        </a>
-                        <a href="#" className="me-4 text-reset">
-                            <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" className="me-4 text-reset">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" className="me-4 text-reset">
-                            <i className="fab fa-github"></i>
-                        </a>
+                   
+                    <div>  <AiFillFacebook/>
+                    <AiFillInstagram/>
+                    <AiFillTwitterCircle/>
                     </div>
                     {/* <!-- Right --> */}
                 </section>
@@ -126,7 +116,9 @@ const FooterPage = () => {
                 {/* <!-- Copyright --> */}
             </footer>
             {/* <!-- Footer --> */}
-        </div>);
+        </div>
+        </div>
+    );
 };
 
 export default FooterPage;

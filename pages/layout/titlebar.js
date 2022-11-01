@@ -1,13 +1,7 @@
 import Link from 'next/link'
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {useSession, signIn, signOut} from 'next-auth/react';
 
 const TitleBar = () => {
+<<<<<<< HEAD
     const {data: session, status} = useSession();
     return (<div className="text_spacing">
         <Navbar bg="light" expand="lg">
@@ -51,6 +45,29 @@ const TitleBar = () => {
             </Container>
         </Navbar>
     </div>
+=======
+    return (
+        <>
+        <header>
+            <nav>
+                <div class = 'nav-container'>
+                    <div class = 'nav-logo'>
+                        <Link href = "/"><a><h3>Kounsel</h3></a></Link>
+                    </div>
+                    <div class = 'nav-menu'>
+                        <ul class = 'nav__links'>
+                        <Link href = "/"><a><li>Home</li></a></Link>
+                        <Link href = "/about"><a><li>About</li></a></Link>
+                        <Link href = "/articles"><a><li>Articles</li></a></Link>
+                        <Link href = "/dashboard"><a><li>Dashboard</li></a></Link>
+                        <Link href = "/login"><a><li><button class='cta-button'>Login</button></li></a></Link>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        </>
+>>>>>>> 48bb8b49a9ab185a876fa5baa2e2ce03102c6a77
     )
 }
 export default TitleBar;

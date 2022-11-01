@@ -7,17 +7,15 @@ const BgImage = () => {
     return (
         <>
             {/* background image in Homepage */}
-            {/* <div style={{ 'height': "60vh", 'width': '100%', 'display':'block' }}> */}
-            <div className="box">
+            <div style={{ 'height': "60vh", 'width': '100%', 'display':'block' }}>
 
-                {/* <div style={{ 'width':"100%" }}> */}
-                {/* <div className="img-responsive img-fluid bgHImg"> */}
-                <Image className="img-responsive img-fluid bgHImg" src={bgimage} alt="bg-picj" />
-                {/* </div> */}
-                {/* </div>  */}
+                 <div style={{ 'width':"100%" }}>
+                    <Image src={bgimage} 
+                        objectFit='contain' height={'1900rem'} alt="bg-picj" />
+                </div> 
+
                 {/* On the image text */}
-                <div className="img_title fs-3">
-                    {/* <div style={{ 'position': 'absolute', 'top': '50vh' }} className="img_title"> */}
+                <div style={{ 'position': 'absolute', 'top': '50vh' }} className="img_title">
                     {/* <div className="dropdown font-sans tracking-wider"> */}
                     <h3>Kounsel</h3>
                     <p>{slogan}</p>

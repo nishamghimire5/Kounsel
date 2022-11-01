@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import '../styles/cards.css';
 import 'bootstrap/dist/css/bootstrap.css'
-import '../styles/bgimage.css';
+import '../styles/Home.css';
 import "../styles/ChatOnline.css";
 import "../styles/messenger.css";
 import "../styles/message.css";
@@ -9,28 +9,29 @@ import "../styles/conversation.css";
 import '../styles/articles.css';
 import '../styles/profile.css';
 import '../styles/chat.css';
+import '../styles/dashboard.css'
+import '../styles/Home.module.css'
 import "react-datepicker/dist/react-datepicker.css";
 import Layout from './layout/layout';
 import {SessionProvider} from 'next-auth/react';
 import Head from "next/head";
 import Script from "next/script";
+<<<<<<< HEAD
 import { useEffect } from 'react';
+=======
+import {useEffect} from "react";
+>>>>>>> 48bb8b49a9ab185a876fa5baa2e2ce03102c6a77
 
 function MyApp({ Component, pageProps, session }) {
   useEffect(() => {
     typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null
-  }, [])
+}, [])
   return (
+<<<<<<< HEAD
    
+=======
+>>>>>>> 48bb8b49a9ab185a876fa5baa2e2ce03102c6a77
     <SessionProvider session={session}>
-    <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
-    <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossOrigin="anonymous"
-      />
     <Layout >
         <Component {...pageProps} />
     </Layout>
