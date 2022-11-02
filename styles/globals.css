@@ -40,15 +40,16 @@ h2{
 .left-aligned-img{
   position: relative;
   top: 7rem;
+  left: 8rem;
   float:left;
 }
 
 .body-text{
   position: relative;
-  width: 920px;
-  height: 298px;
-  left: 14.85rem;
-  top: 10rem;
+  width: 80rem;
+  /* height: 298px; */
+  left: 23rem;
+  top: 13rem;
   color: #000000;
   font-family: 'Barlow', 'san-serif';
   font-style: normal;
@@ -66,3 +67,13 @@ h2{
     background: black;
   }
 } */
+
+.title-position{
+  position:relative;
+  left: 10rem;
+}
+
+.about-footer-position{
+  position: relative;
+  top: 20rem;
+}

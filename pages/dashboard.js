@@ -4,7 +4,7 @@ import FooterPage from './layout/footer';
 const Dashboard = () => {
     return (
     <>
-    <h1>Welcome to your dashboard!</h1>
+    <h1 className='title-position'>Welcome to your dashboard!</h1>
     <div class="dashboard-img">
         <Image src = "https://cdn.dribbble.com/users/1247975/screenshots/17462231/media/64934ea29a7e71f715262fbe111fdce8.jpg?compress=1&resize=1200x900&vertical=top" width="350px" height = "350px" layout="fixed" class="dashboard-img-shape" alt="profile picture"/>
     </div>
