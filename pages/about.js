@@ -2,11 +2,6 @@ import Image from 'next/image'
 import img from '../public/images/Students-rafiki.png'
 import FooterPage from './layout/footer'
 const About = () => {
-<<<<<<< HEAD
-    return (<>
-    
-    </>)
-=======
     return (
     <>
         <h1>About Us</h1>
@@ -28,7 +23,6 @@ const About = () => {
     <FooterPage />
     </>
     )
->>>>>>> 48bb8b49a9ab185a876fa5baa2e2ce03102c6a77
 }
 
 export default About;

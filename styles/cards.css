@@ -32,16 +32,6 @@
   font-family: "Montez", cursive;
  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  /* Created with https://www.css-gradient.com */
->>>>>>> d6edd3f3d6df09f39215c9d7cdec8c1ab055f8e4
-=======
-
-  /* Created with https://www.css-gradient.com */
-  
->>>>>>> 48bb8b49a9ab185a876fa5baa2e2ce03102c6a77
   .wrapper {
     margin: 10vh;
   }
@@ -49,7 +39,7 @@
   .position{
     position: relative;
     left: 200px;
-    top: 600px;
+    top: 5rem;
   }
 
   .messagePosition{
@@ -106,8 +96,8 @@
   }
   .card.card-has-bg:hover .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    background: #236d42;
-    background: linear-gradient(0deg, rgba(7, 135, 56, 0.5) 0%, #855205 100%);
+    /* background: #236d42; */
+    /* background: linear-gradient(0deg, rgba(7, 135, 56, 0.5) 0%, #855205 100%); */
   }
   .card .card-footer {
     background: none;
@@ -132,17 +122,22 @@
     text-decoration: none;
   } 
   .card-img{
-    color: white;
+    color: #073112;
+    /* object-fit: cover; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
   }
   .main:hover .card-img{
     font-size: 1.47em;
     /* to hide the text in the card */
     /* display: none; */
   }
-  .card-img:hover{
+  /* .card-img:hover{
     color: rgb(6, 249, 99);
     font-weight: bolder;
-  }
+  } */
 
   .messageBody {
     display: grid;
@@ -171,7 +166,51 @@
       background: rgba(white, 0.8);
     }
   }
-  /* to bring the blue mask over the pictures or cards */
+
+  .counselor-img{
+    position:relative;
+    width: 400px;
+    height: 400px;
+    left: 20rem; 
+    top: 20rem; 
+  }
+
+  .counselor-title{
+    font-family: 'barlow', sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 18.5rem;
+    top: 13rem;
+  }
+
+
+  .testimonial-title{
+    font-family: 'barlow', sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 18.5rem;
+    top: 8rem;
+  }
+
+  .counselor-msg-container{
+    position: relative;
+    width: 50rem;
+    height: 25rem;
+    left: 50rem;
+    top: -5rem;
+    background-color: #def6f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards-container{
+    position:relative;
+    left: 5rem;
+  }
+  /* to bring the blue6 mask over the pictures or cards */
   /* .card .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     background: #234f6d;

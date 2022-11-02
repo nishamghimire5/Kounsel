@@ -67,8 +67,8 @@ p{
   position: absolute;
   color: rgb(0, 0, 0);
   text-align: right;
-  left: 0;
-  right: 20%;
+  left: 15rem;
+  /* right: 20%; */
   top: 40%;
   letter-spacing: 8px;
   font-family: "Montez", cursive;

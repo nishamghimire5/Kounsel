@@ -24,6 +24,13 @@ h1{
   color: black;
 }
 
+/* h2 used for the kounsel title logo only*/
+h2{
+  font-family: 'Barlow';
+  font-weight:bolder;
+  font-size: 72px;
+  color: rgb(255, 255, 255);
+}
 
 .footer-position{
   position: relative;
