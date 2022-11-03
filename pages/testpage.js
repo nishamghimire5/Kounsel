@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import ReactDOM from "react-dom"
-import io from 'Socket.IO-client'
+import io from 'socket.io-client'
 let socket = io('http://localhost/api/socket');
 class Form extends React.Component {
 
