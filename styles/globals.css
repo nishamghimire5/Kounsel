@@ -3,9 +3,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #FFFCFC;
+  background-color: white;
   font-family: 'Barlow', sans-serif;
 }
+
 
 
 * {
