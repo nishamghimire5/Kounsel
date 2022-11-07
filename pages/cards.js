@@ -39,7 +39,6 @@ const Cards = () => {
       <div className="cards-container">
 
         <div className="row position animate__animated animate__backInUp">
-          {/* <hr className="my-5" /> */}
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
               <Image src={session} className="card-img-top" alt="" width={2000} height={2000} />
