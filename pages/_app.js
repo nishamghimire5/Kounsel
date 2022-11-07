@@ -11,6 +11,7 @@ import '../styles/profile.css';
 import '../styles/chat.css';
 import '../styles/dashboard.css'
 import '../styles/Home.module.css'
+import '../styles/bgimage.css'
 import "react-datepicker/dist/react-datepicker.css";
 import Layout from './layout/layout';
 import {SessionProvider} from 'next-auth/react';

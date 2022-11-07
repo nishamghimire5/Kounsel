@@ -5,7 +5,7 @@ const Testimonials = () => {
     return (
         <div className="container my-5 container1">
             <hr className="my-5" />
-            <h1 className="mb-5">Testimonials</h1>
+            <p className="mb-5">Testimonials</p>
             {/* <!--Carousel Wrapper--> */}
             <div id="multi-item-example" className="carousel slide carousel-multi-item" data-ride="carousel">
                 <div className="carousel-inner" role="listbox">

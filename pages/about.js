@@ -4,10 +4,10 @@ import FooterPage from './layout/footer'
 const About = () => {
     return (
     <>
-        <h1>About Us</h1>
+        <h1 className='title-position'>About Us</h1>
         <div>
             <div class ="left-aligned-img"> 
-                <Image src= {img} width="350px" height = "350px" layout="fixed" alt="illustration of students" />
+                <Image src= {img} width="500px" height = "500px" layout="fixed" alt="illustration of students" />
             </div>
             <div class="body-text">
                 <p>
@@ -20,7 +20,9 @@ const About = () => {
             </p>
         </div>
     </div>
+    <div className="about-footer-position">
     <FooterPage />
+    </div>
     </>
     )
 }

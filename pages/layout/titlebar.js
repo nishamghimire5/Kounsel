@@ -7,7 +7,7 @@ const TitleBar = () => {
             <nav>
                 <div class = 'nav-container'>
                     <div class = 'nav-logo'>
-                        <Link href = "/"><a><h3>Kounsel</h3></a></Link>
+                        <Link href = "/"><a><h2>Kounsel</h2></a></Link>
                     </div>
                     <div class = 'nav-menu'>
                         <ul class = 'nav__links'>
@@ -15,7 +15,8 @@ const TitleBar = () => {
                         <Link href = "/about"><a><li>About</li></a></Link>
                         <Link href = "/articles"><a><li>Articles</li></a></Link>
                         <Link href = "/dashboard"><a><li>Dashboard</li></a></Link>
-                        <Link href = "/login"><a><li><button class='cta-button'>Login</button></li></a></Link>
+                        <Link href = "/login"><a><li>Login</li></a></Link>
+                        <Link href = "/sing-up"><a><li><button class='cta-button'>Get Started</button></li></a></Link>
                         </ul>
                     </div>
                 </div>

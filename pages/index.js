@@ -3,6 +3,7 @@ import TitleBar from './layout/titlebar'
 import FooterPage from './layout/footer'
 import BgImage from './bgimage'
 import Cards from './cards'
+// import counselorMessage from './counselorMessage';
 
 import React, { Component, Fragment } from 'react'
 
@@ -12,10 +13,9 @@ export class index extends Component {
       <React.Fragment>
         <BgImage />
         <Cards />
-        {/* <Testimonials /> */}
-        <div className='container'>
+        <h3 className='testimonial-title'>Testimonials</h3>
+        <Testimonials />
         <FooterPage />
-        </div>
       </React.Fragment>
     )
   }

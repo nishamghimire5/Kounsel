@@ -2,7 +2,7 @@
 .dashboard-img {
     position: relative;
     float: left;
-    left: 5rem;
+    left: 15rem;
     top: 10rem;
 }
 
@@ -12,9 +12,9 @@
 
 .dashboard-text {
     position: relative;
-    width: 920px;
+    width: 70rem;
     height: 298px;
-    left: 15rem;
+    left: 32rem;
     top: 10rem;
     font-family: 'Barlow', 'san-serif';
     font-style: normal;
@@ -27,7 +27,7 @@
 .counselor-chat-button {
     position: relative;
     top: 8rem;
-    left: 15rem;
+    left: 50rem;
     background: #079DBE;
 }
 

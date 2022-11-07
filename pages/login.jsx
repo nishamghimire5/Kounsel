@@ -1,4 +1,4 @@
-import React from 'react'
+    import React from 'react'
 import {useSession, signIn, signOut} from 'next-auth/react'
 
 const login = () => {
@@ -12,8 +12,9 @@ const login = () => {
         )
     } else {
         return(
-            <div><p>You are not signed in.</p>
-            <button onClick={()=> signIn('google')}>Sign in</button>
+            <div>
+            <p style={{position:'relative', top: '5rem'}}>You are not signed in.</p>
+            <button onClick={()=> signIn('google')} style={{position:'relative', top: '5rem'}}>Sign in</button>
             </div>
         )
     }
