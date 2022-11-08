@@ -5,6 +5,17 @@ import Image from "next/image";
 import counselorImage from "../public/images/Counselor-modified.png";
 import webinar from "../public/images/Webinar.gif"
 import session from "../public/images/Psychologist.gif"
+import chat from "../public/images/Messaging.gif"
+import group from "../public/images/GroupTherapy.gif"
+import appointment from "../public/images/DatePicker.gif"
+import meditate from "../public/images/Chakras.gif"
+import explore from "../public/images/explore.gif"
+import learn from "../public/images/Knowledge.gif"
+
+
+
+
+
 
 const Cards = () => {
   // let sectionTopText = `We can help you with`;
@@ -50,7 +61,7 @@ const Cards = () => {
 
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
-              <Image src="https://img.freepik.com/premium-vector/people-with-masks-using-smartphones_213110-1146.jpg" className="card-img-top" alt="..." width={2000} height={2000} />
+              <Image src={chat} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Chat with the counsellor anonymously</h5>
               </div>
@@ -59,7 +70,7 @@ const Cards = () => {
 
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
-              <Image src="https://img.freepik.com/free-vector/appointment-booking-with-smartphone_52683-39832.jpg?w=1380&t=st=1662908942~exp=1662909542~hmac=2b868b23f004d5bd519f57dc9323a43564fea85b57cccc3204ef47eaef061e16" className="card-img-top" alt="..." width={2000} height={2000} />
+              <Image src={appointment} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Book Appointments</h5>
               </div>
@@ -68,7 +79,7 @@ const Cards = () => {
 
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
-              <Image src="https://img.freepik.com/free-vector/tiny-creative-people-writing-poems-typewriter-persons-reading-antique-books-feather-ink-bottle-flat-vector-illustration-literature-poetry-concept-banner-website-design-landing-page_74855-23203.jpg?w=1380&t=st=1662909154~exp=1662909754~hmac=b8dd09942c9fdf79a981677deb687a04bd73e7a47455fb9d8dd108a037ad6676" className="card-img-top" alt="..." width={2000} height={2000} />
+              <Image src={explore} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Explore Articles</h5>
               </div>
@@ -90,7 +101,7 @@ const Cards = () => {
 
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
-              <Image src="https://img.freepik.com/free-vector/group-therapy-illustrated_23-2148654878.jpg?w=826&t=st=1662909766~exp=1662910366~hmac=aa4e26cd9554572b1f16e19867a189c257f51b70b093c33b9fef72f714870a3c" className="card-img-top" alt="..." width={2000} height={2000} />
+              <Image src={group} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Group Sessions</h5>
               </div>
@@ -99,7 +110,7 @@ const Cards = () => {
 
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
-              <Image src="https://img.freepik.com/free-vector/woman-practicing-yoga-mountains-female-character-enjoying-nature-doing-sport-mat-flat-vector-illustration-healthy-lifestyle-meditation-concept-banner-website-design-landing-web-page_74855-21104.jpg?w=1380&t=st=1662910019~exp=1662910619~hmac=67cc135d8ff95f47339a801054f2399b145e59e4a5d5ef4552dbdebd15458a29" className="card-img-top" alt="" width={2000} height={2000} />
+              <Image src={meditate} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Ask for help</h5>
               </div>
@@ -108,7 +119,7 @@ const Cards = () => {
 
           <div className="col-sm-2">
             <div className="card" style={{ width: 18 + 'rem' }}>
-              <Image src="https://cdn.dribbble.com/users/5286978/screenshots/11351248/adspur-_mental_health-01-02.png" className="card-img-top" alt="..." width={2000} height={2000} />
+              <Image src={learn} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Educate Yourself</h5>
               </div>
