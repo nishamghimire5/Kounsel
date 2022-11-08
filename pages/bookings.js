@@ -22,7 +22,7 @@ export default function Bookings({ initialBookings }) {
     const [datePickerReadOnly, setReadOnly] = useState(true);
     const [buttonText, setButtonText] = useState('Make Changes');
 
-    const makeChanges = (event) => {
+    const makeChanges = async (event) => {
         if(event.target.value == "Make Changes") {
             setReadOnly(false);
             setButtonText('Save');
@@ -46,8 +46,28 @@ export default function Bookings({ initialBookings }) {
         });
     }
 
+    const chatDisabled = (date) => {
+        if (new Date() >= new Date(date)) return false;
+        return true;
+    }
+
+    const isApproved = (approved) => {
+        if (approved === 'Yes') return true;
+        return false;
+    }
+
+    const updateDate = async (email, date) => {
+        const data = await fetch(`/api/book?email=${email}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({date: date}),
+        });
+    }
+
     return (
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -66,8 +86,9 @@ export default function Bookings({ initialBookings }) {
                         <td><DatePicker selected={new Date(booking.date)} dateFormat="MM/dd/yyyy h:mm aa" timeInputLabel="Time:" showTimeInput disabled={datePickerReadOnly} /></td>
                         <td>{booking.message}</td>
                         <td>
-                            <button className="btn btn-light" onClick={() => {approveRequest(booking.email)}}>Approve</button>
+                            <button className="btn btn-light" onClick={() => {approveRequest(booking.email)}} disabled={isApproved(booking.approved)}>Approve</button>
                             <button className="btn btn-light" onClick={() => {console.log("from the button: " + booking.email)}}>Delete</button>
+                            <button className="btn btn-light" disabled={chatDisabled(booking.date)}>Chat</button>
                         </td>
                     </tr>
                 ))}

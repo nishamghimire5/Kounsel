@@ -33,18 +33,28 @@ export default async function handler(req, res) {
   if (req.method == "PUT") {
     const email = req.query.email;
 
-    const { approved } = req.body;
+    const bookData = req.body;
 
     const record = await prisma.booking.update({
       where: {
         email: email,
       },
-      data: {
-        approved: approved,
-      },
+      data: bookData
     });
 
     res.status(201).json({ message: "Updated" });
+  }
+
+  if (req.method == "DELETE") {
+    const email = req.query.email;
+
+    const record = await prisma.booking.delete({
+      where: {
+        email: email,
+      },
+    });
+
+    res.status(202).json({ message: "Updated" });
   }
 
 
