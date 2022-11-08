@@ -4,17 +4,18 @@ const Articles = (props) => {
     return (
         //  available blue , red green , yellow
         <div className='body list-child-1'>
-            <section class="light list-child-2">
+            <section class="list-child-2 mt-5 pt-5">
                 <div class="container py-2 list-child-3">
-                    <div class="h1 text-center text-dark " id="pageHeaderTitle">{props.pTitle}
-                    </div>
+                    {/* <div class="h1 text-center text-dark" id="pageHeaderTitle"> */}
+                    {/* {props.pTitle} */}
+                    {/* </div> */}
 
                     <div class={order ? `postcard postcard-for light red` : `postcard postcard-rev light green`}>
                         <a class="postcard__img_link" href="#">
                             <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
                         </a>
                         <div class="postcard__text t-dark">
-                            <h1 class="postcard__title blue"><a href="#">{props.pTitle}</a></h1>
+                            <h2 class="postcard__title blue"><a href="#">{props.pTitle}</a></h2>
                             <div class="postcard__subtitle small">
                                 <time datetime="2020-05-25 12:00:00">
                                     <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020

@@ -67,8 +67,8 @@ a:hover {
   color: inherit;
 }
 
-.postcard h1,
-.postcard .h1 {
+.postcard h2,
+.postcard .h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -194,7 +194,7 @@ a:hover {
     transform: scale(1.1);
   }
 
- 
+
 
   .postcard:nth-child(2n+1) .postcard__text::before {
     left: -12px !important;
@@ -337,7 +337,8 @@ a:hover {
   .red:nth-child(2n)::before {
     background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%);
   }
-/* 
+
+  /* 
   .yellow::before {
     background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
   }
