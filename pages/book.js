@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import {useSession, getSession, signIn, signOut} from 'next-auth/react';
 
-export default function Book() {
+export default function Book({user}) {
 	const [startDate, setStartDate] = useState(new Date());
 	// Handles the submit event on form submit.
 	const handleSubmit = async (event) => {
@@ -12,7 +12,7 @@ export default function Book() {
 	  // Get data from the form.
 	  const data = {
 		date: startDate.toString(),
-		email: event.target.email.value,
+		email: user.email,
 		message: event.target.message.value,
 		approved: 'No',
 	  }
@@ -49,7 +49,6 @@ export default function Book() {
 		<DatePicker selected={startDate} onChange=
 			{(date) => setStartDate(date)} dateFormat="MM/dd/yyyy h:mm aa" showTimeInput />
   
-		<input type="text" id="email" name="email" placeholder="Email" required />
 		<input type="text" id="message" name="message" placeholder="Message" />
   
 		<button type="submit">Submit</button>
@@ -58,7 +57,7 @@ export default function Book() {
   }
 
 
-/*export async function getServerSideProps(context) {
+export async function getServerSideProps(context) {
     const session = await getSession(context)
 
         if (!session) {
@@ -73,4 +72,4 @@ export default function Book() {
         return {
             props: {user},
         }
-}*/
+}
