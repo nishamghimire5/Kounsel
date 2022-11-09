@@ -2,14 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-  "/": "pages/index.js"
-=======
-  "/": "pages/index.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/about": "pages/about.js",
-  "/articles": "pages/articles.js",
+  "/login": "pages/login.js",
   "/dashboard": "pages/dashboard.js",
-  "/login": "pages/login.js"
->>>>>>> a9508c2874f728d638d46ccbc9a8f58f1d05fe6c
+  "/": "pages/index.js"
 }
