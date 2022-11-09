@@ -8,7 +8,7 @@ const FooterPage = () => {
         for students to share their feelings and discuss their mental problems without the fear 
         of being judged.`;
     return (
-        <div className="">
+        <div className="body">
             {/* <!-- Footer --> */}
             <div className="footer-position">
                 <footer className="text-center text-lg-start bg-light text-muted">

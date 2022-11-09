@@ -64,12 +64,14 @@ p{
 
 .img_title {
   /* margin-top: 17rem; */
-  position: absolute;
+  /* overflow: hidden; */
+  position: relative;
   color: rgb(0, 0, 0);
-  text-align: right;
   left: 15rem;
   /* right: 20%; */
-  top: 40%;
+  top: -40rem;
   letter-spacing: 8px;
   font-family: "Montez", cursive;
 }
+
+
