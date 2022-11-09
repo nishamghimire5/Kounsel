@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap');
+
 html,
 body {
-  height:100%;
-  width:100%;
-  margin:0%;
-  padding:0%;
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
   overflow-x: hidden;
   background-color: rgb(253, 253, 253);
   font-family: 'Barlow', sans-serif;
@@ -18,37 +19,37 @@ body {
   padding: 0;
 }
 
-h1{
+h1 {
   position: relative;
   top: 7rem;
   left: 30px;
   font-family: 'Barlow';
-  font-weight:bolder;
+  font-weight: bolder;
   font-size: 44px;
   color: black;
 }
 
 /* h2 used for the kounsel title logo only*/
-h2{
+h2 {
   font-family: 'Barlow';
-  font-weight:bolder;
+  font-weight: bolder;
   font-size: 72px;
   color: rgb(255, 255, 255);
 }
 
-.footer-position{
+/* .footer-position {
   position: relative;
   top: 10rem;
-}
+} */
 
-.left-aligned-img{
+.left-aligned-img {
   position: relative;
   top: 7rem;
   left: 8rem;
-  float:left;
+  float: left;
 }
 
-.body-text{
+.body-text {
   position: relative;
   width: 80rem;
   /* height: 298px; */
@@ -62,6 +63,7 @@ h2{
   line-height: 38px;
   color: #000000;
 }
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -72,12 +74,16 @@ h2{
   }
 } */
 
-.title-position{
-  position:relative;
+.title-position {
+  position: relative;
   left: 10rem;
 }
 
-.about-footer-position{
+/* .about-title-postion {
+  left: 5 rem;
+} */
+
+/* .about-footer-position {
   position: relative;
   top: 20rem;
-}
+} */

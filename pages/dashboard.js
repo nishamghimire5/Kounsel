@@ -17,11 +17,11 @@ const Dashboard = () => {
                 </p>
             </div>
 
-            <Link href="/chat"><a><button class="counselor-chat-button">Chat with the counselor</button></a></Link>
-            <Link href="/book"><a><button class="appointment-book-button">Book an appointment</button></a></Link>
-
-            <div class='footer-position'>
+            <div className="mb-5 pb-5">
+                <Link href="/chat"><a><button class="counselor-chat-button">Chat with the counselor</button></a></Link>
+                <Link href="/book"><a><button class="appointment-book-button">Book an appointment</button></a></Link>
             </div>
+            <br /> <br /> <br />
         </>
     )
 }
