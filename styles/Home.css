@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap");
+.nav-container {
+  position: relative;
+  width: 250%;
+  height: 100px;
+  left: -12rem;
+  top: -2.5rem;
+  background: #3dccc7;
+}
+
+.nav-logo {
+  position: relative;
+  left: 10rem;
+  top: 30px;
+  cursor: pointer;
+  color: white;
+  font-family: "Barlow", "san-serif";
+  font-size: 44px;
+  /* font-weight: bolder; */
+}
+
+li {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav__links li {
+  position: relative;
+  left: 50rem;
+  display: inline-block; /*Key to making it horizontal but didn't work in its own*/
+  padding: 0px 20px;
+  font-family: "Barlow";
+  font-weight: bolder;
+}
+
+li:hover {
+  transition: 0.5s;
+  transform: scale(1.08);
+}
+
+li:active {
+  color:#c0c781
+}
+
+button {
+  padding: 9px 25px;
+  background-color: #07beb8;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family: "barlow", sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+button:hover {
+  background-color: #c0c781;
+}
+
+.home-image-position {
+  position: relative;
+  left: 50rem;
+  top: 2.5rem;
+}
+
+.static-image-position {
+  position: relative;
+  left: 12rem;
+  top: 10rem;
+}
+
+.cta-button {
+  position: relative;
+  left: 4rem;
+  background-color: #dcdd9a;
+  color: black;
+}
+
+.cta-position {
+  position: relative;
+  top: -30rem;
+  left: 14.5%;
+}
+
+.slogan-position {
+  position: relative;
+  left: 1.45rem;
+}
+
+.services {
+  font-family: "barlow", sans-serif;
+  font-size: 40px;
+  color: white;
+  position: relative;
+  left: 18.5rem;
+  top: 2rem;
+}

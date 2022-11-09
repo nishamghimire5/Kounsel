@@ -2,37 +2,76 @@
   position: relative;
 }
 
-.text_spacing {
-  letter-spacing: 2px;
-}
-
 .bgHImg {
-  max-height: 450px;
+  max-height: 500px;
   min-width: 100%;
 }
 
 .getStartedBtn {
-  background: #dd7448;
+background-color: transparent;
+border: 1px solid #26b67a;
+box-sizing: border-box;
+color: #000000;
+font-family: "Avenir Next LT W01 Bold",sans-serif;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+padding: 16px 23px;
+position: relative;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.getStartedBtn:hover,
+.getStartedBtn:active {
+outline: 0;
 }
 
 .getStartedBtn:hover {
-  background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
+background-color: transparent;
+cursor: pointer;
 }
 
-/* p{
-    color:black ;
-  }
-   */
+.getStartedBtn:before {
+background-color: #D5EDF6;
+content: "";
+height: calc(100% + 3px);
+position: absolute;
+right: -7px;
+top: -9px;
+transition: 300ms ease-in;
+width: 100%;
+z-index: -1;
+}
+
+.getStartedBtn:hover:before {
+background-color: #6df6c8;
+}
+
+@media (min-width: 768px) {
+.getStartedBtn {
+  padding: 16px 32px;
+}
+}
+
+
+p{
+  color:black ;
+}
+
 
 .img_title {
-  margin-top: 10px;
-  position: absolute;
-  color: white;
-  text-align: center;
-  left: 0;
-  right: 6.3%;
-  top: 72%;
-  letter-spacing: 3px;
+  /* margin-top: 17rem; */
+  /* overflow: hidden; */
+  position: relative;
+  color: rgb(0, 0, 0);
+  left: 15rem;
+  /* right: 20%; */
+  top: -40rem;
+  letter-spacing: 8px;
   font-family: "Montez", cursive;
-  z-index: 999;
 }
+
+

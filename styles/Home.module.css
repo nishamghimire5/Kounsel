@@ -2,6 +2,7 @@
   padding: 0 2rem;
 }
 
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -26,11 +27,6 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
 }
 
 .title a:hover,
@@ -88,8 +84,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .card h2 {

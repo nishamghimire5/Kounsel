@@ -1,15 +1,59 @@
+.text_style{
+        margin-top: 17rem;
+        position: absolute;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        left: 0;
+        right: 0%;
+        top: 100%;
+        letter-spacing: 8px;
+        font-family: "Montez", cursive;
+ }
 
-  /* Created with https://www.css-gradient.com */
+ .message{
+  max-width: 79em;
+  position: relative;
+  left: 10%;
+ }
+
+ .heading1{
+  position: relative;
+  left: 10%;
+  top:600px;
+  letter-spacing: 8px;
+  font-family: "Montez", cursive;
+ }
+
+ .heading2{
+  position: relative;
+  left: 10px;
+  top:50px;
+  letter-spacing: 8px;
+  font-family: "Montez", cursive;
+ }
+
   .wrapper {
     margin: 10vh;
   }
   
+  .position{
+    position: relative;
+    left: 200px;
+    top: 5rem;
+  }
+
+  .messagePosition{
+    max-width: 1290px;
+    position: relative;
+    left: 10px;
+    top: 50px;
+  }
   .card {
     position: relative;
     border: none;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 20px;
     min-height: 325px;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   }
@@ -52,8 +96,8 @@
   }
   .card.card-has-bg:hover .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    background: #236d42;
-    background: linear-gradient(0deg, rgba(7, 135, 56, 0.5) 0%, #855205 100%);
+    /* background: #236d42; */
+    /* background: linear-gradient(0deg, rgba(7, 135, 56, 0.5) 0%, #855205 100%); */
   }
   .card .card-footer {
     background: none;
@@ -78,18 +122,95 @@
     text-decoration: none;
   } 
   .card-img{
-    color: white;
+    color: #073112;
+    /* object-fit: cover; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
   }
   .main:hover .card-img{
     font-size: 1.47em;
     /* to hide the text in the card */
     /* display: none; */
   }
-  .card-img:hover{
+  /* .card-img:hover{
     color: rgb(6, 249, 99);
     font-weight: bolder;
+  } */
+
+  .messageBody {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    font-family: "Montez", cursive;
   }
-  /* to bring the blue mask over the pictures or cards */
+  .messageImg {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 650px) {
+    .messageBody {
+      display: block;
+      font-size: 80%;
+    }
+    .message_p {
+      position: relative;
+      margin: -3rem 0 2rem 1rem;
+      padding: 1rem;
+      background: rgba(white, 0.8);
+    }
+  }
+
+  .counselor-img{
+    position:relative;
+    width: 400px;
+    height: 400px;
+    left: 20rem; 
+    top: 20rem; 
+  }
+
+  .counselor-title{
+    font-family: 'barlow', sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 18.5rem;
+    top: 13rem;
+  }
+
+
+  .testimonial-title{
+    font-family: 'barlow', sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 18.5rem;
+    top: 8rem;
+  }
+
+  .counselor-msg-container{
+    position: relative;
+    width: 50rem;
+    height: 25rem;
+    left: 50rem;
+    top: -5rem;
+    background-color: #def6f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards-container{
+    position:relative;
+    left: 5rem;
+  }
+  /* to bring the blue6 mask over the pictures or cards */
   /* .card .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     background: #234f6d;
