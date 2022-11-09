@@ -1,11 +1,6 @@
 import Image from 'next/image'
 import img from '../public/images/Students-rafiki.png'
 const About = () => {
-<<<<<<< HEAD
-    return (<><h2>About</h2>
-    
-</>)
-=======
     return (
         <>
             <div className='title-position'>
@@ -29,7 +24,6 @@ const About = () => {
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </>
     )
->>>>>>> prek
 }
 
 export default About;
