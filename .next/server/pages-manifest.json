@@ -1,11 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/about": "pages/about.js",
-  "/articles": "pages/articles.js",
-  "/dashboard": "pages/dashboard.js",
-  "/login": "pages/login.js"
+  "/_document": "pages/_document.js"
 }
