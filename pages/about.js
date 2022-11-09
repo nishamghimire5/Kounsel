@@ -3,7 +3,9 @@ import img from '../public/images/Students-rafiki.png'
 const About = () => {
     return (
         <>
-            <h1 className='title-position'>About Us</h1>
+            <div className='title-position'>
+                <h1 className='ms-5 ps-5'>About Us</h1>
+            </div>
             <div>
                 <div class="left-aligned-img">
                     <Image src={img} width="500px" height="500px" layout="fixed" alt="illustration of students" />
@@ -19,8 +21,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div className="about-footer-position">
-            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </>
     )
 }
