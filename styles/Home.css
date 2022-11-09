@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap");
+
 .nav-container {
   position: relative;
   width: 250%;
@@ -35,7 +36,8 @@ header {
 .nav__links li {
   position: relative;
   left: 50rem;
-  display: inline-block; /*Key to making it horizontal but didn't work in its own*/
+  display: inline-block;
+  /*Key to making it horizontal but didn't work in its own*/
   padding: 0px 20px;
   font-family: "Barlow";
   font-weight: bolder;
@@ -47,7 +49,7 @@ li:hover {
 }
 
 li:active {
-  color:#c0c781
+  color: #c0c781
 }
 
 button {
