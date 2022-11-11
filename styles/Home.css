@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap");
+
 .nav-container {
   overflow: hidden;
   position: fixed;
@@ -49,7 +50,7 @@ li:hover {
 }
 
 li:active {
-  color:#c0c781
+  color: #c0c781
 }
 
 button {
