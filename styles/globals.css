@@ -79,16 +79,3 @@ h2 {
   left: 10rem;
 }
 
-/* .about-title-postion {
-  left: 5 rem;
-} */
-
-/* .about-footer-position {
-  position: relative;
-  top: 20rem;
-} */
-
-.empty-container{
-  position: relative;
-  top: 20rem;
-}

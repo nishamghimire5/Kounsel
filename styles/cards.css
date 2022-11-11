@@ -171,7 +171,7 @@
     position:relative;
     width: 400px;
     height: 400px;
-    left: 20rem; 
+    left: 5%; 
     top: 65rem; 
     float:left;
   }
@@ -181,7 +181,7 @@
     font-size: 40px;
     color: rgb(0, 0, 0);
     position: relative;
-    left: 15.5%;
+    left: 5%;
     top: 60rem;
   }
 
@@ -192,14 +192,13 @@
     color: rgb(0, 0, 0);
     position: relative;
     left: 16%;
-    top: 75rem;
   }
 
   .counselor-msg-container{
     position: relative;
     width: 50rem;
     height: 25rem;
-    left: 25%;
+    left: 13%;
     top: 65rem;
     background-color: #def6f5;
     display: flex;

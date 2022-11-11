@@ -11,6 +11,7 @@ import appointment from "../public/images/DatePicker.gif"
 import meditate from "../public/images/Chakras.gif"
 import explore from "../public/images/explore.gif"
 import learn from "../public/images/Knowledge.gif"
+import help from "../public/images/help.gif"
 
 
 
@@ -22,36 +23,18 @@ const Cards = () => {
   return (
     <div>
       <div className="services">
-        {/* <hr className="my-5" /> */}
+       <hr className="my-5" />
         <p>Our Services</p>
       </div>
 
-      {/* <section className="wrapper">
-        <div className="container">
-          <div className="row">
-            <div className="col text-center mb-5">
-              {/* <h1 className="display-4">{sectionTopText}</h1> */}
-      {/* <p className="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p> */}
-      {/* </div>
-          </div>
-          <div className="row" style={{ display: "flex" }}>
-            {CardInfo.map((card, index) => {
-              return (
-                <CardData
-                  key={index}
-                  textInPic={card.title}
-                  imgLink={card.image}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </section> */}
+
+      <div className="position">
       <div className="cards-container">
 
-        <div className="row position animate__animated animate__backInUp">
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+        <div className="row">
+
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={session} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Meet the counsellor</h5>
@@ -59,8 +42,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={chat} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Chat with the counsellor anonymously</h5>
@@ -68,8 +51,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={appointment} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Book Appointments</h5>
@@ -77,21 +60,17 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={explore} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Explore Articles</h5>
               </div>
             </div>
           </div>
-        </div>
 
-        <br />
-
-        <div className="row position animate__animated animate__backInUp">
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+        <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={webinar} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Schedule Online Meetings</h5>
@@ -99,8 +78,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={group} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Group Sessions</h5>
@@ -108,8 +87,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={meditate} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Ask for help</h5>
@@ -117,16 +96,28 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-2">
-            <div className="card" style={{ width: 18 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
+              <Image src={help} className="card-img-top" alt="..." width={2000} height={2000} />
+              <div className="card-body">
+                <h5 className="card-title">Seek Guidance</h5>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div className="card" style={{ width: 22 + 'rem' }}>
               <Image src={learn} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Educate Yourself</h5>
               </div>
             </div>
           </div>
-        </div>
+
       </div>
+      </div>
+
+
       <div>
         <h3 className="counselor-title">Message from the Counselor</h3>
         <div className="counselor-img">
@@ -152,7 +143,32 @@ const Cards = () => {
         </p>
       </div>
     </div>
+
+    </div>
   );
 };
 
 export default Cards;
+
+
+      {/* <section className="wrapper">
+        <div className="container">
+          <div className="row">
+            <div className="col text-center mb-5">
+              {/* <h1 className="display-4">{sectionTopText}</h1> */}
+      {/* <p className="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p> */}
+      {/* </div>
+          </div>
+          <div className="row" style={{ display: "flex" }}>
+            {CardInfo.map((card, index) => {
+              return (
+                <CardData
+                  key={index}
+                  textInPic={card.title}
+                  imgLink={card.image}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section> */}
