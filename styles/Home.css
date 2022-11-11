@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap");
 .nav-container {
-  position: relative;
-  width: 250%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
   height: 100px;
-  left: -12rem;
-  top: -2.5rem;
+  left: 0;
+  top: 0;
+  z-index: 9999;
   background: #3dccc7;
 }
 
 .nav-logo {
   position: relative;
-  left: 10rem;
-  top: 30px;
+  left: 10%;
+  top: 30%;
   cursor: pointer;
   color: white;
   font-family: "Barlow", "san-serif";
@@ -29,12 +31,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 5% 10%;
 }
 
 .nav__links li {
   position: relative;
-  left: 50rem;
+  left: 45%;
   display: inline-block; /*Key to making it horizontal but didn't work in its own*/
   padding: 0px 20px;
   font-family: "Barlow";
@@ -64,36 +66,39 @@ button {
 
 button:hover {
   background-color: #c0c781;
+  transition: 0.5s;
+  transform: scale(1.08);
 }
 
 .home-image-position {
   position: relative;
-  left: 50rem;
-  top: 2.5rem;
+  right: 10%;
+  top: 2.5%;
+  float: right;
 }
 
 .static-image-position {
   position: relative;
-  left: 12rem;
-  top: 10rem;
+  left: 12%;
+  top: 10%;
 }
 
 .cta-button {
   position: relative;
-  left: 4rem;
   background-color: #dcdd9a;
   color: black;
 }
 
 .cta-position {
   position: relative;
-  top: -30rem;
-  left: 14.5%;
+  top: 20rem;
+  left: 20%;
 }
 
 .slogan-position {
   position: relative;
-  left: 1.45rem;
+  left: 2%;
+  top: -10%;
 }
 
 .services {
@@ -101,6 +106,6 @@ button:hover {
   font-size: 40px;
   color: white;
   position: relative;
-  left: 18.5rem;
-  top: 2rem;
+  left: 15%;
+  top: 50rem;
 }

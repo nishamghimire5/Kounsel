@@ -172,7 +172,8 @@
     width: 400px;
     height: 400px;
     left: 20rem; 
-    top: 20rem; 
+    top: 65rem; 
+    float:left;
   }
 
   .counselor-title{
@@ -180,8 +181,8 @@
     font-size: 40px;
     color: rgb(0, 0, 0);
     position: relative;
-    left: 18.5rem;
-    top: 13rem;
+    left: 15.5%;
+    top: 60rem;
   }
 
 
@@ -190,16 +191,16 @@
     font-size: 40px;
     color: rgb(0, 0, 0);
     position: relative;
-    left: 18.5rem;
-    top: 8rem;
+    left: 16%;
+    top: 75rem;
   }
 
   .counselor-msg-container{
     position: relative;
     width: 50rem;
     height: 25rem;
-    left: 50rem;
-    top: -5rem;
+    left: 25%;
+    top: 65rem;
     background-color: #def6f5;
     display: flex;
     justify-content: center;
@@ -209,6 +210,7 @@
   .cards-container{
     position:relative;
     left: 5rem;
+    top: 50rem;
   }
   /* to bring the blue6 mask over the pictures or cards */
   /* .card .card-img-overlay {

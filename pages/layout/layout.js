@@ -6,9 +6,9 @@ export default function Layout({ children }) {
         <>
             <TitleBar />
             <main>{children}</main>
-            <div style={{position: 'relative', top: 10 + 'rem'}}>
-            <FooterPage />
-            </div>
+            {/* <div style={{position: 'relative', top: 10 + 'rem'}}> */}
+            {/* <FooterPage /> */}
+            {/* </div> */}
         </>
     )
 }
