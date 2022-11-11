@@ -22,7 +22,7 @@ const Cards = () => {
                 </div>
                 <div className='row mb-5' style={{ display: 'flex' }}>
                     {CardInfo.map((card, index) => {
-                        return (<CardData key={index} email={card.email} name={card.name} />)
+                        return (<CardData key={index} count={index + 1} email={card.email} date={card.date} msg={card.msg} name={card.name} />)
                     }
                     )}
                 </div>
