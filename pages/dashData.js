@@ -9,6 +9,9 @@ const CardData = (props) => {
                     {/* <div className="card-body"> */}
                     <h4 className="card-title">
                         <div className=" text-center">
+                            <div className="text-danger">
+                                {props.index}
+                            </div>
                             <div className="text-primary">
                                 Email: {props.email}
                             </div>
