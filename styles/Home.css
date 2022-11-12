@@ -14,7 +14,6 @@
 .nav-logo {
   position: relative;
   left: 10%;
-  top: 30%;
   cursor: pointer;
   color: white;
   font-family: "Barlow", "san-serif";
@@ -37,7 +36,7 @@ header {
 
 .nav__links li {
   position: relative;
-  left: 45%;
+  /* left: 60%; */
   display: inline-block; /*Key to making it horizontal but didn't work in its own*/
   padding: 0px 20px;
   font-family: "Barlow";
