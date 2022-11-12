@@ -30,7 +30,7 @@ button{
   padding: 9px 25px;
   background-color: #07beb8;
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   font-family: "barlow", sans-serif;
@@ -62,7 +62,7 @@ button:hover {
   background-color: #dcdd9a;
   color: black;
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   cursor: pointer;
 }
 
