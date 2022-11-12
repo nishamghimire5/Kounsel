@@ -14,11 +14,15 @@
 .nav-logo {
   position: relative;
   left: 10%;
-  cursor: pointer;
   color: white;
   font-family: "Barlow", "san-serif";
   font-size: 44px;
   /* font-weight: bolder; */
+}
+
+.nav-logo:hover{
+  color: white;
+  cursor: pointer;
 }
 
 li {
@@ -46,6 +50,7 @@ header {
 li:hover {
   transition: 0.5s;
   transform: scale(1.08);
+  cursor: pointer;
 }
 
 li:active {

@@ -7,7 +7,7 @@ const BgImage = () => {
     return (
         <>
             <div className="box">
-                <div className="home-image-position">
+                <div className="home-image-position img-responsive img-fluid">
                     <Image
                         src={bgimage}
                         objectFit="fill"

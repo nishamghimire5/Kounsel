@@ -1,8 +1,9 @@
+@media (min-width: 768px){
 .box {
   position: relative;
 }
 
-
+}
 p{
   color:black ;
 }
