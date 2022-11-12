@@ -62,7 +62,7 @@ button {
   transition: all 0.3s ease 0s;
   font-family: "barlow", sans-serif;
   font-size: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 button:hover {

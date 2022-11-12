@@ -29,12 +29,12 @@ const Cards = () => {
 
 
       <div className="position">
-      <div className="cards-container">
+        <div className="cards-container">
 
-        <div className="row">
+        <div className="row gy-3 my-3">
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card">
               <Image src={session} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Meet the counsellor</h5>
@@ -42,8 +42,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card">
               <Image src={chat} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Chat with the counsellor anonymously</h5>
@@ -51,8 +51,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={appointment} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Book Appointments</h5>
@@ -60,8 +60,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={explore} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Explore Articles</h5>
@@ -69,8 +69,8 @@ const Cards = () => {
             </div>
           </div>
 
-        <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+        <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={webinar} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Schedule Online Meetings</h5>
@@ -78,8 +78,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={group} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Group Sessions</h5>
@@ -87,8 +87,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={meditate} className="card-img-top" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Ask for help</h5>
@@ -96,8 +96,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={help} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Seek Guidance</h5>
@@ -105,8 +105,8 @@ const Cards = () => {
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div className="card" style={{ width: 22 + 'rem' }}>
+          <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
+            <div className="card" >
               <Image src={learn} className="card-img-top" alt="..." width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Educate Yourself</h5>
@@ -116,7 +116,6 @@ const Cards = () => {
 
       </div>
       </div>
-
 
       <div>
         <h3 className="counselor-title">Message from the Counselor</h3>
