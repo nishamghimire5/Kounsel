@@ -3,17 +3,17 @@ import CardInfo from './assets/data/councelling.json';
 //import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Cards = () => {
-    let sectionTopText = `We can help you with`;
+    let sectionTopText = `Our Services`;
     return (<div>
-        <section className="wrapper">
+        <section className="wrapper card-position">
             <div className="container">
                 <div className="row">
-                    <div className="col text-center mb-5">
-                        <h1 className="display-4">{sectionTopText}</h1>
+                    <div className="col mb-5 services">
+                        <h1>{sectionTopText}</h1>
                         {/* <p className="lead">Lorem ipsum dolor sit amet at enim hac integer volutpat maecenas pulvinar. </p> */}
                     </div>
                 </div>
-                <div className='row' style={{ display: 'flex' }}>
+                <div className='row' style={{ display: 'flex', position:'relative', left:'10%'}}>
                     {CardInfo.map((card, index) => {
                         return (<CardData key={index} textInPic={card.title} imgLink={card.image} />)
                     }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap");
 html,
 body {
   padding: 0;
@@ -23,4 +24,81 @@ a {
     color: white;
     background: black;
   }
+}
+
+button{
+  padding: 9px 25px;
+  background-color: #07beb8;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family: "barlow", sans-serif;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+button:hover {
+  background-color: #c0c781;
+  transition: 0.5s;
+  transform: scale(1.08);
+}
+
+.home-image-position {
+  position: relative;
+  right: 10%;
+  top: 2.5%;
+  /* float: right; */
+}
+
+.static-image-position {
+  position: relative;
+  left: 12%;
+  top: 10%;
+}
+
+.cta-button {
+  position: relative;
+  background-color: #dcdd9a;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cta-position {
+  position: relative;
+  top: 20rem;
+  left: 20%;
+}
+
+.slogan-position {
+  position: relative;
+  left: 2%;
+  top: -10%;
+}
+
+.services {
+  font-family: "barlow", sans-serif;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  position: relative;
+  left: 15%;
+  top: 15%;
+}
+.nav__links {
+  font-family: "Barlow";
+  font-weight: bolder;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.nav__links :hover {
+  transition: 0.5s;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.nav__links :active {
+  color: #c0c781
 }

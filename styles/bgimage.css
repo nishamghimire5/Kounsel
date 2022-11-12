@@ -7,17 +7,21 @@
 }
 
 .bgHImg {
-  max-height: 450px;
-  min-width: 100%;
+  position: relative;
+  right: 10%;
+  top: 2.5%;  
+  float: right;
+  width:"700px";
+  height:"700px";
 }
 
-.getStartedBtn {
+/* .getStartedBtn {
   background: #dd7448;
 }
 
 .getStartedBtn:hover {
   background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
-}
+} */
 
 /* p{
     color:black ;
@@ -27,11 +31,10 @@
 .img_title {
   margin-top: 10px;
   position: absolute;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
-  left: 0;
-  right: 6.3%;
-  top: 72%;
+  left: 25%;
+  top: 15rem;
   letter-spacing: 3px;
   font-family: "Montez", cursive;
   z-index: 999;
