@@ -35,7 +35,7 @@ const Cards = () => {
 
           <div className="col-sm-12 col-md-6 col-lg-4 mb-4 main">
             <div className="card">
-              <Image src={session} className="card-img-top" alt="" width={2000} height={2000} />
+              <Image src={session} className="card-img-top img-responsive img-fluid" alt="" width={2000} height={2000} />
               <div className="card-body">
                 <h5 className="card-title">Meet the counsellor</h5>
               </div>
@@ -130,7 +130,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="counselor-msg-container">
+      <div className="counselor-msg-container-position">
         <p style={{ position: "relative", left: "0rem", width: "40rem" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

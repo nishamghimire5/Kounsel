@@ -9,7 +9,7 @@ export class index extends Component {
       <React.Fragment>
         <BgImage />
         <Cards />
-        <div style={{position: 'relative', top: '85rem'}}>
+        <div style={{position: 'relative', top: '60rem'}}>
           <h2 className='testimonial-title'>Testimonials</h2>
           <Testimonials />
         </div>

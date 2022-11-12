@@ -9,8 +9,8 @@ const FooterPage = () => {
         of being judged.`;
     return (
         <div className="body">
-            {/* <!-- Footer --> */}
-            <div className="footer-position">
+            {/* <!-- Footer --> */};
+            <div style={{position: 'relative', top: '60rem'}}>
                 <footer className="text-center text-lg-start bg-light text-muted">
                     {/* <!-- Section: Social media --> */}
                     <section

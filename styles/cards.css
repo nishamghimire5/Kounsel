@@ -172,7 +172,7 @@
     width: 400px;
     height: 400px;
     left: 5%; 
-    top: 65rem; 
+    top: 45rem; 
     float:left;
   }
 
@@ -182,7 +182,7 @@
     color: rgb(0, 0, 0);
     position: relative;
     left: 5%;
-    top: 60rem;
+    top: 40rem;
   }
 
 
@@ -194,12 +194,12 @@
     left: 16%;
   }
 
-  .counselor-msg-container{
+  .counselor-msg-container-position{
     position: relative;
     width: 50rem;
     height: 25rem;
     left: 13%;
-    top: 65rem;
+    top: 45rem;
     background-color: #def6f5;
     display: flex;
     justify-content: center;
@@ -209,7 +209,7 @@
   .cards-container{
     position:relative;
     left: 5rem;
-    top: 50rem;
+    top: 30rem;
   }
   /* to bring the blue6 mask over the pictures or cards */
   /* .card .card-img-overlay {
