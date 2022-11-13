@@ -1,39 +1,30 @@
 
 [
   {
-    "image": "../public/images/Psychologist.gif",
     "title": "Meet with the counsellor"
   },
   {
-    "image": "../public/images/Messaging.gif",
     "title": "Chat with the counsellor anonymously"
   },
   {
-    "image": "../public/images/DatePicker.gif",
     "title": "Book Appointments"
   },
   {
-    "image": "../public/images/explore.gif",
     "title": "Explore Articles"
   },
   {
-    "image": "../public/images/Webinar.gif",
     "title": "Schedule online sessions"
   },
   {
-    "image": "../public/images/GroupTherapy.gif",
     "title": "Group Sessions"
   },
   {
-    "image": "../public/images/Chakras.gif",
     "title": "Ask for help"
   },
   {
-    "image": "../public/images/help.gif",
     "title": "Seek Guidance"
   },
   {
-    "image": "../public/images/Knowledge.gif",
     "title": "Educate yourself"
   }
 ]

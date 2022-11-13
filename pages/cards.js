@@ -2,10 +2,20 @@ import CardData from "./carddata";
 import CardInfo from "./assets/data/councelling.json";
 import counselorImage from "../public/images/Counselor-modified.png";
 import Image from "next/image";
+import webinar from "../public/images/1.gif"
+import session from "../public/images/2.gif"
+import chat from "../public/images/3.gif"
+import group from "../public/images/4.gif"
+import appointment from "../public/images/5.gif"
+import meditate from "../public/images/6.gif"
+import explore from "../public/images/7.gif"
+import learn from "../public/images/8.gif"
+import help from "../public/images/9.gif"
 //import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Cards = () => {
   let sectionTopText = `Our Services`;
+  const imagesHere = [webinar,session,chat,group,appointment,meditate,explore,learn,help];
   return (
     <div>
       <section className="wrapper card-position">
@@ -25,7 +35,7 @@ const Cards = () => {
                 <CardData
                   key={index}
                   textInPic={card.title}
-                  imgLink={card.image}
+                    image={imagesHere[index]}
                 />
               );
             })}
