@@ -83,7 +83,7 @@ button:hover {
   font-size: 40px;
   color: rgb(0, 0, 0);
   position: relative;
-  left: 15%;
+  /* left: 0; */
   top: 15%;
 }
 .nav__links {
@@ -101,4 +101,10 @@ button:hover {
 
 .nav__links :active {
   color: #c0c781
+}
+
+.title{
+  font-family: "barlow", sans-serif;
+  font-size: 40px;
+  color: black;
 }
