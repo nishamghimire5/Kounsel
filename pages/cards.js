@@ -48,7 +48,7 @@ const Cards = () => {
       {/* overflow again caused by this line */}
       <h2
         className="title"
-        style={{ position: "absolute", top: "139rem", left: "15%" }}
+        style={{ position: "absolute", top: "150rem", left: "15%" }}
       >
         Message from the Counsellor
       </h2>
