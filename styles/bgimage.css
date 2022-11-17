@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap");
+
+
+.box {
+  position: relative;
+}
+
+.text_spacing {
+  letter-spacing: 2px;
+}
+
+
+.bgHImg {
+  position: relative;
+  top: 2.5%;  
+  width:"700px";
+  height:"700px";
+}
+
+.img_title {
+  margin-top: 10px;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  right: 23%;
+  top: 20rem;
+  letter-spacing: 3px;
+  font-family: 'Barlow', 'san-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: larger;
+  z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.bgHImg {
+  max-height: 450px;
+  min-width: 100%;
+}
+
+.getStartedBtn {
+  background: #dd7448;
+}
+
+.getStartedBtn:hover {
+  background: linear-gradient(30deg, rgba(7, 135, 56, 0.5) 5%, #855205 100%);
+}
+
+/* p{
+    color:black ;
+  }
+   */
+
+/* .img_title {
+  margin-top: 10px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  left: 0;
+  right: 6.3%;
+  top: 72%;
+  letter-spacing: 3px;
+  font-family: "Montez", cursive;
+  z-index: 999;
+}   */
