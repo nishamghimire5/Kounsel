@@ -1,17 +1,32 @@
 [
     {
-        "title": "The first article"
+        "title": "Why to Choose Professional Counseling",
+        "link": "https://bhattaaditi.wordpress.com/2020/07/11/professional-counseling/",
+        "img_link":"https://bhattaaditi.files.wordpress.com/2020/07/professional-counseling.jpg",
+        "description": "It’s really helpful when you have friends who can listen to your boring stories with patience and offer support. We need friends to talk to and share about whatever is going in our lives but there are certain situations in which we need people who are trained to listen. Here are some reasons why it is better to go for professional counseling."
     },
     {
-        "title": "The second article"
+        "title": "The Revival",
+        "link":"https://bhattaaditi.wordpress.com/2020/07/09/the-revival/",
+        "img_link":"https://bhattaaditi.files.wordpress.com/2020/07/99131993_3262601107107029_8254938936892194816_o.jpg",
+        "description": "A poem to lean on in the midst of your turbulence."
     },
     {
-        "title": "The third article"
+        "title": "How to help people with depression",
+        "link":"https://bhattaaditi.wordpress.com/2021/09/30/how-to-help-people-dealing-with-depression/",
+        "img_link": "https://bhattaaditi.files.wordpress.com/2021/09/vector-men-with-bipolar-symptoms-or-depression-and-should-consult-a-psychiatrist.jpg",
+        "description": "Your words can have a big impact on someone’s mental health. Be careful about the words you choose to speak. Here are some ways that can be useful when you have a person with depression around you."
     },
     {
-        "title": "The fourth article"
+        "title": "How to calm your inner storm",
+        "link":"https://getpocket.com/read/3517488716",
+        "img_link": "https://pocket-image-cache.com/640x360/filters:format(jpg):extract_focal()/https%3A%2F%2Fnu.psyche.co%2Fimages%2Ff50539b8-4dee-42fd-8bb9-cd9a0a010920%2F1500x1500.jpg",
+        "description": "When emotions are already intense, it’s often hard to think about what you can do to help yourself, so the first thing you need to work on is getting re-regulated as quickly as possible. Here are some fast-acting skills that work by changing your body’s chemistry."
     },
     {
-        "title": "The fifth article"
+        "title": "Mental Models I find Repeatedly Useful",
+        "link":"https://getpocket.com/read/1341799552",
+        "img_link": "https://pocket-image-cache.com/640x360/filters:format(jpg):extract_focal()/https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*C1DE6dVyfkEdFIvmFZC_4Q.jpeg",
+        "description": "A mental model is just a concept you can use to help try to explain things (e.g. Hanlon’s Razor — “never attribute to malice that which is adequately explained by carelessness.”). There are tens of thousands of mental models, and every discipline has their own set that you can learn through coursework, mentorship, or first-hand experience."
     }
 ]
