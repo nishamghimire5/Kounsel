@@ -4,7 +4,7 @@ const Articles = (props) => {
     return (
         //  available blue , red green , yellow
         <div className='body list-child-1'>
-            <section className="light list-child-2">
+            <section className="list-child-2">
                 <div className="container py-2 list-child-3">
                     <div className="h1 text-center text-dark " id="pageHeaderTitle">{props.pTitle}
                     </div>
@@ -32,8 +32,6 @@ const Articles = (props) => {
                         </div>
                     </div>
                 </div>
-
-
             </section>
         </div>
     )

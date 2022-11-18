@@ -1,5 +1,6 @@
 import data from './assets/data/articles.json'
 import Articles from './fetcharticles'
+import FooterPage from "./layout/footer";
 
 const ArticlesShow = () => {
 
@@ -10,6 +11,9 @@ const ArticlesShow = () => {
                 return (<Articles key={index} check={index} pTitle={send.title} />)
             }
             )}
+            <div style={{ position: 'relative', top: '5rem' }}>
+                <FooterPage />
+            </div>
         </div>
     )
 }

@@ -40,7 +40,7 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      <br /><br /><br />
       <div style={{ position: "relative", top: "10rem" }}>
         <FooterPage />
       </div>
