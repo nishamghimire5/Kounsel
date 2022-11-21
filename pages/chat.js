@@ -223,7 +223,7 @@ export default function Home({ uniqueBooking, busyStatus, user }) {
           <div className="d-flex align-items-center justify-content-center vh-100">
             <div className="text-center">
               <h1 className="display-1 fw-bold">Chat Unavailable</h1>
-              <p className="fs-3">Either the counselor is currently busy, hasn't reviewed your request, or your appointment date hasn&apos;t arrived yet.</p>
+              <p className="fs-3">Either the counselor is currently busy, hasn&apos;t reviewed your request, or your appointment date hasn&apos;t arrived yet.</p>
               <p className="lead">
                 Please wait until the counselor is free or until your appointment date.
               </p>
