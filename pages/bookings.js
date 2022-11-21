@@ -4,23 +4,39 @@ import React, { useState } from 'react';
 import Router from "next/router";
 import { useEffect } from "react";
 import prisma from "../prisma";
+import Link from "next/link";
+import email from "../counselormail";
+import {useSession, signIn, signOut, getSession} from 'next-auth/react'
+import failedauth from "./unauthorized";
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
     const bookings = await prisma.booking.findMany();
+    const session = await getSession(context);
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/login',
+                permanent: false,
+            },
+        }
+    }
+    const {user} = session;
     const status = await prisma.busy.findUnique({
         where: {
             id: 1,
         }
     });
+
     return {
         props: {
             initialBookings: bookings,
-            busyStatus: status
+            busyStatus: status,
+            user: user
         }
     };
 }
 
-export default function Bookings({ initialBookings, busyStatus }) {
+export default function Bookings({ initialBookings, busyStatus, user }) {
 
 
 
@@ -31,18 +47,15 @@ export default function Bookings({ initialBookings, busyStatus }) {
     const [datePickerReadOnly, setReadOnly] = useState(true);
     const [buttonText, setButtonText] = useState('Make Changes');
     const [busyButtonText, setBusyButtonText] = useState(busyStatus.busy ? 'Toggle to available' : 'Toggle to busy');
-
-    const [isOpen, setOpen] = useState(false);
-    const toggleMenu = () => setOpen(!isOpen);
+    const [bookingEntries, setBookingEntries] = useState(initialBookings);
 
     const makeChanges = async (event) => {
         if (event.target.value == "Make Changes") {
             setReadOnly(false);
             setButtonText('Save');
-            toggleMenu();
         } else {
             setReadOnly(true);
-            Router.reload();
+            setButtonText('Make Changes');
         }
     }
 
@@ -98,8 +111,8 @@ export default function Bookings({ initialBookings, busyStatus }) {
         Router.reload();
     }
 
-    const chatDisabled = (date) => {
-        if (new Date() >= new Date(date)) return false;
+    const chatDisabled = (date, time) => {
+        if (new Date() >= new Date(date + ' ' + time)) return false;
         return true;
     }
 
@@ -108,52 +121,96 @@ export default function Bookings({ initialBookings, busyStatus }) {
         return false;
     }
 
-    const updateDate = async (email, date) => {
+    const updateDate = async (e, email) => {
+        let entry = [...bookingEntries];
+        entry = entry.map((x) => {
+            if (x.email === email) x.date = e.target.value;
+            return x;
+        });
+        setBookingEntries(entry);
         const data = await fetch(`/api/book?email=${email}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ date: date }),
+            body: JSON.stringify({ date: e.target.value }),
         });
+
     }
 
-    return (
-        <>
-            {isOpen && (<div style={{ margin: '5px' }}>Please click save to see your changes.</div>)}
-            <div><input onClick={makeChanges} type="button" style={{ 'width': '150px', 'margin': '5px' }} value={buttonText} className="btn btn-light" /></div>
-            <table className="table" id="example">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Booked Date</th>
-                        <th scope="col">Message</th>
-                        <th scope="col">Approved</th>
-                        <th scope="col" className="text-center">Actions</th>
-                        <th><input onClick={toggleBusy} type="button" style={{ 'width': '150px', 'margin': '5px' }} value={busyButtonText} className="btn btn-light" /></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {initialBookings.slice(0).reverse().map((booking) => (
-                        <tr key={booking}>
-                            <th scope="row">{++count}</th>
-                            <td>{booking.name}</td>
-                            <td>{booking.email}</td>
-                            <td><DatePicker selected={new Date(booking.date)} onChange={(date = new Date()) => { updateDate(booking.email, date) }} dateFormat="MM/dd/yyyy h:mm aa" timeInputLabel="Time:" showTimeInput disabled={datePickerReadOnly} /></td>
-                            <td>{booking.message}</td>
-                            <td>{booking.approved}</td>
-                            <td>
-                                <button className="btn btn-light" onClick={() => { approveRequest(booking.email) }} disabled={isApproved(booking.approved)}>Approve</button>
-                                <button className="btn btn-light" onClick={() => { deleteRecord(booking.email) }}>Delete</button>
-                                <button className="btn btn-light" disabled={chatDisabled(booking.date)}>Chat</button>
+    const updateTime = async (e, email) => {
+        let entry = [...bookingEntries];
+        entry = entry.map((x) => {
+            if (x.email === email) x.time = e.target.value;
+            return x;
+        });
+        setBookingEntries(entry);
+        const data = await fetch(`/api/book?email=${email}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ time: e.target.value }),
+        });
 
-                            </td>
+    }
+
+    if (user.email != email) {
+        return (
+            <>
+            <div className="d-flex align-items-center justify-content-center vh-100">
+                <div className="text-center">
+                    <p className="fs-3">You are not authorized to access this page.</p>
+                    <Link href="/dashboard">
+                        <a href="" className="btn btn-light">Dashboard</a>
+                    </Link>
+                </div>
+            </div>
+            </>
+        )
+    } else {
+        return (
+            <>
+                <div><input onClick={makeChanges} type="button" style={{ 'width': '150px', 'margin': '5px' }} value={buttonText} className="btn btn-light" /></div>
+                <table className="table" id="example">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Booked Date</th>
+                            <th scope="col">Message</th>
+                            <th scope="col">Approved</th>
+                            <th scope="col" className="text-center">Actions</th>
+                            <th><input onClick={toggleBusy} type="button" style={{ 'width': '150px', 'margin': '5px' }} value={busyButtonText} className="btn btn-light" /></th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-        </>
-    )
+                    </thead>
+                    <tbody>
+                        {bookingEntries.slice(0).reverse().map((booking) => (
+                            <tr key={booking}>
+                                <th scope="row">{++count}</th>
+                                <td>{booking.name}</td>
+                                <td>{booking.email}</td>
+                                {/*<td><DatePicker selected={new Date(booking.date)} onChange={(date = new Date()) => { updateDate(booking.email, date) }} dateFormat="MM/dd/yyyy h:mm aa" timeInputLabel="Time:" showTimeInput disabled={datePickerReadOnly} /></td>*/}
+                                <td>
+                                    <input type="date" id="date" name="date" onChange={(e) => updateDate(e, booking.email)} value={booking.date} disabled={datePickerReadOnly}/>
+                                    <input type="time" id="time" name="time" onChange={(e) => updateTime(e, booking.email)} value={booking.time} disabled={datePickerReadOnly}/>
+                                </td>
+                                <td>{booking.message}</td>
+                                <td>{booking.approved}</td>
+                                <td>
+                                    <button className="btn btn-light" onClick={() => { approveRequest(booking.email) }} disabled={isApproved(booking.approved)}>Approve</button>
+                                    <button className="btn btn-light" onClick={() => { deleteRecord(booking.email) }}>Delete</button>
+                                    <Link href="/chat">
+                                        <button className="btn btn-light" disabled={chatDisabled(booking.date, booking.time)}>Chat</button>
+                                    </Link>
+    
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </>
+        )
+    }
 }

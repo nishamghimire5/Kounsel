@@ -3,9 +3,12 @@ import React from 'react'
 import { PrismaClient } from '@prisma/client'
 import Link from 'next/link';
 import prisma from '../prisma';
+import email from '../counselormail';
+import fixName from '../fixname';
 
-export default function Profile({user, uniqueUser}) {
-    if (uniqueUser != null) {
+export default function Profile({user, uniqueUser, totalBookings}) {
+    let name = fixName(user.name);
+    if (uniqueUser != null || user.email == email) {
         return (
             <div className="container emp-profile">
             <form method="post">
@@ -18,13 +21,13 @@ export default function Profile({user, uniqueUser}) {
                     <div className="col-md-6">
                         <div className="profile-head">
                                     <h5>
-                                        {uniqueUser.name}
+                                        {name}
                                     </h5>
                                     <h6>
                                         {user.email}
                                     </h6>
-                                    <p className="proile-rating">Bookings: <span>{uniqueUser.bookings}</span></p>
-                                    <p className="proile-rating">Sessions: <span>{uniqueUser.sessions}</span></p>
+                                    {user.email != email && <p className="proile-rating">Bookings: <span>{uniqueUser.bookings}</span></p>}
+                                    {user.email == email && <p className="proile-rating">Current bookings: <span>{totalBookings.length}</span></p>}
                             <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 <li className="nav-item">
                                     <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -56,7 +59,7 @@ export default function Profile({user, uniqueUser}) {
                                                 <label>Name</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <p>{uniqueUser.name}</p>
+                                                <p>{name}</p>
                                             </div>
                                         </div>
                                         <div className="row">
@@ -152,6 +155,8 @@ export async function getServerSideProps(context) {
         }
         const {user} = session;
 
+        const bookings = await prisma.booking.findMany();
+
         const thisUser = await prisma.user.findUnique({
             where: {
                 email: user.email,
@@ -162,6 +167,7 @@ export async function getServerSideProps(context) {
             props: {
                 user: user,
                 uniqueUser: thisUser,
+                totalBookings: bookings
             },
         }
 }

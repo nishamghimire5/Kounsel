@@ -14,6 +14,7 @@ model Booking {
   email String @unique
   name String
   date String
+  time String
   message String
   approved String
 }

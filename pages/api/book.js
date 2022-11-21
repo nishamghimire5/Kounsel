@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
     // Found the name.
     // Sends a HTTP success code
-    res.status(200).json({ data: `${body.date} ${body.name} ${body.email} ${body.message} ${body.approved}` })
+    res.status(200).json({ data: `${body.date} ${body.time} ${body.name} ${body.email} ${body.message} ${body.approved}` })
   }
 
   if (req.method == "PUT") {

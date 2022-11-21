@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useSession, signIn, signOut, getSession } from 'next-auth/react'
 import Router from "next/router";
 import prisma from "../prisma";
+import email from "../counselormail";
 
 export async function getServerSideProps(context) {
     const session = await getSession(context)
@@ -34,14 +35,15 @@ export async function getServerSideProps(context) {
     return {
         props: {
             uniqueBooking: thisBooking,
-            busyStatus: status
+            busyStatus: status,
+            user: user
         }
     };
 }
 
 
 
-export default function Bookings({ uniqueBooking, busyStatus }) {
+export default function Bookings({ uniqueBooking, busyStatus, user }) {
     console.log(uniqueBooking);
     console.log(busyStatus.busy);
     let count = 0;
@@ -81,8 +83,8 @@ export default function Bookings({ uniqueBooking, busyStatus }) {
         });
     }
 
-    const chatDisabled = (date, status) => {
-        if ((new Date() >= new Date(date)) && !status) return false;
+    const chatDisabled = (date, time, status) => {
+        if ((new Date() >= new Date(date + ' ' + time)) && !status) return false;
         return true;
     }
 
@@ -101,48 +103,67 @@ export default function Bookings({ uniqueBooking, busyStatus }) {
         });
     }
 
-    if (uniqueBooking != null) {
+    if (user.email == email) {
         return (
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Booked Date</th>
-                        <th scope="col">Message</th>
-                        <th scope="col">Approved</th>
-                        <th scope="col" className="text-center">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">{++count}</th>
-                        <td><DatePicker selected={new Date(uniqueBooking.date)} dateFormat="MM/dd/yyyy h:mm aa" timeInputLabel="Time:" showTimeInput disabled={datePickerReadOnly} /></td>
-                        <td>{uniqueBooking.message}</td>
-                        <td>{uniqueBooking.approved}</td>
-                        <td>
-                            <button className="btn btn-light" onClick={() => { deleteRecord(uniqueBooking.email) }}>Delete</button>
-                            <Link href="/chat">
-                                <button className="btn btn-light" disabled={chatDisabled(uniqueBooking.date, busyStatus.busy)}>Chat</button>
-                            </Link>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        )
+			<>
+				<div className="d-flex align-items-center justify-content-center vh-100">
+					<div className="text-center">
+						<p className="fs-3">This page is not available to the counselor.</p>
+						<Link href="/bookings">
+							<a href="" className="btn btn-light">See Bookings</a>
+						</Link>
+					</div>
+				</div>
+			</>
+		)
     } else {
-        return (
-            <>
-                <div className="d-flex align-items-center justify-content-center vh-100">
-                    <div className="text-center">
-                        <p className="fs-3">You have no bookings yet.</p>
-                        <Link href="/book">
-                            <a href="" className="btn btn-light">Book</a>
-                        </Link>
+        if (uniqueBooking != null) {
+            return (
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Booked Date</th>
+                            <th scope="col">Message</th>
+                            <th scope="col">Approved</th>
+                            <th scope="col" className="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{++count}</th>
+                            {/*<td><DatePicker selected={new Date(uniqueBooking.date)} dateFormat="MM/dd/yyyy h:mm aa" timeInputLabel="Time:" showTimeInput disabled={datePickerReadOnly} /></td>*/}
+                            <td>
+                                <input type="date" id="date" name="date" value={uniqueBooking.date} disabled />
+                                <input type="time" id="time" name="time" value={uniqueBooking.time} disabled />
+                            </td>
+                            <td>{uniqueBooking.message}</td>
+                            <td>{uniqueBooking.approved}</td>
+                            <td>
+                                <button className="btn btn-light" onClick={() => { deleteRecord(uniqueBooking.email) }}>Delete</button>
+                                <Link href="/chat">
+                                    <button className="btn btn-light" disabled={chatDisabled(uniqueBooking.date, uniqueBooking.time, busyStatus.busy)}>Chat</button>
+                                </Link>
+                            </td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            )
+        } else {
+            return (
+                <>
+                    <div className="d-flex align-items-center justify-content-center vh-100">
+                        <div className="text-center">
+                            <p className="fs-3">You have no bookings yet.</p>
+                            <Link href="/book">
+                                <a href="" className="btn btn-light">Book</a>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-            </>
-        )
+                </>
+            )
+        }
     }
 
 

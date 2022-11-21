@@ -1,25 +1,31 @@
 import Link from 'next/link'
 import bgimage from '../public/images/bg-image.gif'
 import Image from 'next/image'
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 const BgImage = () => {
+
+    const { data: session, status } = useSession();
+
     let slogan = "A Safe Space"
     return (
         <>
-        {/* <section className='wrapper'> */}
+            {/* <section className='wrapper'> */}
             <div className='box'>
                 <div className='bgHImg'>
-                    <Image className="img-responsive img-fluid" src={bgimage} alt="bg-picj"  objectFit="fill"
+                    <Image className="img-responsive img-fluid" src={bgimage} alt="bg-picj" objectFit="fill"
                         width={"1000px"}
                         height={"1000px"}
-                     />
+                    />
                 </div>
                 <div className='img_title'>
                     <h3>Kounsel</h3>
                     <p>{slogan}</p>
-                    <button className='cta-button'>
-                        <Link href="" onClick={() => signIn('google', { callbackUrl: '/dashboard' })} style={{color:'white'}}>Login</Link>
-                    </button>
+                    {status === "unauthenticated" &&
+                        <Link href="">
+                            <button className='cta-button' onClick={() => signIn('google', { callbackUrl: '/dashboard' })}>Login</button>
+                        </Link>
+                    }
                 </div>
             </div>
             {/* </section> */}

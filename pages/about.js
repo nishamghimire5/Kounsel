@@ -12,7 +12,7 @@ const About = () => {
         <div className="row">
           
           <div className="col-sm col-md col-lg">
-            <div class="left-aligned-img">
+            <div className="left-aligned-img">
               <Image
                 src={img}
                 width="500px"
@@ -27,7 +27,7 @@ const About = () => {
             className="col-sm col-md col-lg"
             style={{ position: "relative", top: "10rem" }}
           >
-            <div class="body-text">
+            <div className="body-text">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

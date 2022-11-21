@@ -4,6 +4,7 @@ import {useSession, getSession, signIn, signOut} from 'next-auth/react';
 import { PrismaClient } from "@prisma/client"
 import Link from 'next/link';
 import prisma from '../prisma';
+import email from '../counselormail';
 
 export default function Book({uniqueBooking, user, uniqueUser}) {
 	const [startDate, setStartDate] = useState(new Date());
@@ -14,7 +15,8 @@ export default function Book({uniqueBooking, user, uniqueUser}) {
   
 	  // Get data from the form.
 	  const data = {
-		date: startDate.toString(),
+		date: event.target.date.value,
+		time: event.target.time.value,
 		email: user.email,
 		name: uniqueUser.name,
 		message: event.target.message.value,
@@ -55,32 +57,47 @@ export default function Book({uniqueBooking, user, uniqueUser}) {
 	  })
 	  alert(`Is this what you submitted: ${result.data}`)
 	}
-	if (uniqueBooking == null) {
+	if (user.email == email) {
 		return (
-			// We pass the event to the handleSubmit() function on submit.
-			<form onSubmit={handleSubmit}>
-			  <DatePicker selected={startDate} onChange=
-				  {(date) => setStartDate(date)} dateFormat="MM/dd/yyyy h:mm aa" showTimeInput />
-		
-			  
-			  <textarea className="input-group-text mt-1" type="text" id="message" name="message" placeholder="Message"></textarea>
-			  
-			  <button type="submit" className="btn btn-primary">Submit</button>
-			</form>
-		  )
+			<>
+				<div className="d-flex align-items-center justify-content-center vh-100">
+					<div className="text-center">
+						<p className="fs-3">This page is not available to the counselor.</p>
+						<Link href="/bookings">
+							<a href="" className="btn btn-light">See Bookings</a>
+						</Link>
+					</div>
+				</div>
+			</>
+		)
 	} else {
-		return (
-            <>
-                <div className="d-flex align-items-center justify-content-center vh-100">
-                    <div className="text-center">
-                        <p className="fs-3">You already have a session booked.</p>
-                        <Link href="/mybookings">
-                            <a href="" className="btn btn-light">My Bookings</a>
-                        </Link>
-                    </div>
-                </div>
-            </>
-        )
+		if (uniqueBooking == null) {
+			return (
+				// We pass the event to the handleSubmit() function on submit.
+				<form onSubmit={handleSubmit}>
+					  <input type="date" id="date" name="date" />   
+					  <input type="time" id="time" name="time" />
+			
+				  
+				  <textarea className="input-group-text mt-1" type="text" id="message" name="message" placeholder="Message"></textarea>
+				  
+				  <button type="submit" className="btn btn-primary">Submit</button>
+				</form>
+			  )
+		} else {
+			return (
+				<>
+					<div className="d-flex align-items-center justify-content-center vh-100">
+						<div className="text-center">
+							<p className="fs-3">You already have a session booked.</p>
+							<Link href="/mybookings">
+								<a href="" className="btn btn-light">My Bookings</a>
+							</Link>
+						</div>
+					</div>
+				</>
+			)
+		}
 	}
   }
 
