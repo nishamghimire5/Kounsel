@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client"
 import Link from 'next/link'
 import React, { useState } from 'react';
 import prisma from '../prisma'
+import email from '../counselormail'
 
 const AblyChatComponent = dynamic(() => import('../components/AblyChatComponent'), { ssr: false });
 
@@ -77,7 +78,7 @@ export default function Home({ uniqueBooking, busyStatus, user }) {
 
 
 
-  if (user.email === "sekikunne@gmail.com") {
+  if (user.email == email) {
     return (
       <>
         <input onClick={toggleBusy} type="button" style={{ 'width': '150px', 'margin': '5px' }} value={busyButtonText} className="btn btn-light" />
@@ -216,13 +217,13 @@ export default function Home({ uniqueBooking, busyStatus, user }) {
           </div>
         </>
       )
-    } else if ((new Date() < new Date(uniqueBooking.date + ' ' + uniqueBooking.time)) || busyStatus.busy) {
+    } else if ((new Date() < new Date(uniqueBooking.date + ' ' + uniqueBooking.time)) || busyStatus.busy || uniqueBooking.approved == "No") {
       return (
         <>
           <div className="d-flex align-items-center justify-content-center vh-100">
             <div className="text-center">
               <h1 className="display-1 fw-bold">Chat Unavailable</h1>
-              <p className="fs-3">Either the counselor is currently busy or your appointment date hasn&apos;t arrived yet.</p>
+              <p className="fs-3">Either the counselor is currently busy, hasn't reviewed your request, or your appointment date hasn&apos;t arrived yet.</p>
               <p className="lead">
                 Please wait until the counselor is free or until your appointment date.
               </p>

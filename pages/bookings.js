@@ -111,8 +111,8 @@ export default function Bookings({ initialBookings, busyStatus, user }) {
         Router.reload();
     }
 
-    const chatDisabled = (date, time) => {
-        if (new Date() >= new Date(date + ' ' + time)) return false;
+    const chatDisabled = (date, time, approved) => {
+        if ((new Date() >= new Date(date + ' ' + time)) && approved != "No") return false;
         return true;
     }
 
@@ -202,7 +202,7 @@ export default function Bookings({ initialBookings, busyStatus, user }) {
                                     <button className="btn btn-light" onClick={() => { approveRequest(booking.email) }} disabled={isApproved(booking.approved)}>Approve</button>
                                     <button className="btn btn-light" onClick={() => { deleteRecord(booking.email) }}>Delete</button>
                                     <Link href="/chat">
-                                        <button className="btn btn-light" disabled={chatDisabled(booking.date, booking.time)}>Chat</button>
+                                        <button className="btn btn-light" disabled={chatDisabled(booking.date, booking.time, booking.approved)}>Chat</button>
                                     </Link>
     
                                 </td>

@@ -83,8 +83,8 @@ export default function Bookings({ uniqueBooking, busyStatus, user }) {
         });
     }
 
-    const chatDisabled = (date, time, status) => {
-        if ((new Date() >= new Date(date + ' ' + time)) && !status) return false;
+    const chatDisabled = (date, time, status, approved) => {
+        if ((new Date() >= new Date(date + ' ' + time)) && !status && approved != "No") return false;
         return true;
     }
 
@@ -142,7 +142,7 @@ export default function Bookings({ uniqueBooking, busyStatus, user }) {
                             <td>
                                 <button className="btn btn-light" onClick={() => { deleteRecord(uniqueBooking.email) }}>Delete</button>
                                 <Link href="/chat">
-                                    <button className="btn btn-light" disabled={chatDisabled(uniqueBooking.date, uniqueBooking.time, busyStatus.busy)}>Chat</button>
+                                    <button className="btn btn-light" disabled={chatDisabled(uniqueBooking.date, uniqueBooking.time, busyStatus.busy, uniqueBooking.approved)}>Chat</button>
                                 </Link>
                             </td>
                         </tr>
