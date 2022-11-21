@@ -44,8 +44,6 @@ export async function getServerSideProps(context) {
 
 
 export default function Bookings({ uniqueBooking, busyStatus, user }) {
-    console.log(uniqueBooking);
-    console.log(busyStatus.busy);
     let count = 0;
 
     const [datePickerReadOnly, setReadOnly] = useState(true);
@@ -86,7 +84,9 @@ export default function Bookings({ uniqueBooking, busyStatus, user }) {
     const chatDisabled = (date, time, status, approved) => {
         const d = new Date();
         const s = d.toLocaleString(undefined);
-        if ((s >= new Date(date + ' ' + time)) && !status && approved != "No") return false;
+        const userT = new Date(date + ' ' + time);
+        const userTime = userT.toLocaleString(undefined);
+        if ((s >= userTime) && !status && approved != "No") return false;
         return true;
     }
 

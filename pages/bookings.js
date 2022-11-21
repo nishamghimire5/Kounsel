@@ -115,7 +115,9 @@ export default function Bookings({ initialBookings, busyStatus, user }) {
     const chatDisabled = (date, time, approved) => {
         const d = new Date();
         const s = d.toLocaleString(undefined);
-        if ((s >= new Date(date + ' ' + time)) && approved != "No") return false;
+        const userT = new Date(date + ' ' + time);
+        const userTime = userT.toLocaleString(undefined);
+        if ((s >= userTime) && approved != "No") return false;
         return true;
     }
 
