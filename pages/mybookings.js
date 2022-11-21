@@ -84,7 +84,9 @@ export default function Bookings({ uniqueBooking, busyStatus, user }) {
     }
 
     const chatDisabled = (date, time, status, approved) => {
-        if ((new Date() >= new Date(date + ' ' + time)) && !status && approved != "No") return false;
+        const d = new Date();
+        const s = d.toLocaleString(undefined);
+        if ((s >= new Date(date + ' ' + time)) && !status && approved != "No") return false;
         return true;
     }
 
