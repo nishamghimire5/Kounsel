@@ -60,11 +60,11 @@ export default function TitleBar() {
                             </Link>}
                         {status === "authenticated" &&
                             <Link href="">
-                                <button ><a className='text-decoration-none text-light mr-4 fs-6' href="" onClick={() => signOut({ callbackUrl: '/' })} >Logout - {finalName}</a></button>
+                                <button className='text-decoration-none text-light mr-4 fs-6' onClick={() => signOut({ callbackUrl: '/' })} >Logout - {finalName}</button>
                             </Link>}
                         {status === "unauthenticated" &&
                             <Link href="">
-                                <button className='cta-button'><a className='text-decoration-none text-dark mr-4 fs-6' href="" onClick={() => signIn('google', { callbackUrl: '/dashboard' })} >Login</a></button>
+                                <button className='cta-button text-decoration-none text-dark mr-4 fs-6' onClick={() => signIn('google', { callbackUrl: '/dashboard' })}>Login</button>
                             </Link>}
                     </Nav>
                 </Navbar.Collapse>

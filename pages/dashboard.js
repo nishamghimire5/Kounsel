@@ -59,10 +59,8 @@ export default function Dashboard({ user, busyStatus }) {
                 body: JSON.stringify(userData),
             });
         }
-
-        if (user.email !== email) {
-            createUser(user);   
-        }
+        
+        createUser(user);   
     }, []);
 
 
@@ -96,7 +94,7 @@ export default function Dashboard({ user, busyStatus }) {
             <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHdlbGxuZXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" className="rounded mx-auto d-block" alt="..."></img>
 
             <p className="fs-5 lead" style={{ margin: "20px" }}>
-                The website will provide counselling services to individuals of Kathmandu University who are experiencing difficulties in their lives. The website will offer a range of services including booking an appintment, online counselling, and many more.
+                The website will provide counselling services to individuals of Kathmandu University who are experiencing difficulties in their lives. The website will offer a range of services including booking an appointment, online counselling, and many more.
                 The website will also provide information on a range of topics such as mental health, relationships, and grief. <Link href="/about"><a href="" className="button1">Read More</a></Link>
             </p>
             <div className="d-grid gap-2">
@@ -108,8 +106,6 @@ export default function Dashboard({ user, busyStatus }) {
 
         </>)
     }
-
-    return(<div>no</div>)
 }
 
 export async function getServerSideProps(context) {

@@ -1,129 +1,156 @@
-import {useSession, signIn, signOut, getSession} from 'next-auth/react'
-import React from 'react'
-import { PrismaClient } from '@prisma/client'
-import Link from 'next/link';
-import prisma from '../prisma';
-import email from '../counselormail';
-import fixName from '../fixname';
+import React, { useState } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useSession, signIn, signOut, getSession } from 'next-auth/react';
+import prisma from "../prisma";
+import email from "../counselormail";
+import fixName from "../fixname";
+import Link from "next/link";
 
-export default function Profile({user, uniqueUser, totalBookings}) {
+export async function getServerSideProps(context) {
+    const session = await getSession(context)
+
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/login',
+                permanent: false,
+            },
+        }
+    }
+    const { user } = session;
+
+    const bookings = await prisma.booking.findMany();
+    const thisUser = await prisma.user.findUnique({
+        where: {
+            email: user.email,
+        }
+    });
+
+    return {
+        props: {
+            user: user,
+            thisUser: thisUser,
+            totalBookings: bookings
+        }
+    };
+}
+
+export default function Testprof({ totalBookings, user, thisUser }) {
     let name = fixName(user.name);
-    if (uniqueUser != null || user.email == email) {
+
+    const [imagePublicId, setImagePublicId] = useState("");
+    const router = useRouter();
+
+    const [image, setImage] = useState(null);
+
+    const uploadToClient = (event) => {
+        if (event.target.files && event.target.files[0]) {
+            const tmpImage = event.target.files[0];
+            setImage(tmpImage);
+        }
+    };
+
+    const uploadToServer = async () => {
+        const formData = new FormData();
+        const file = image;
+        formData.append('inputFile', file);
+        formData.append('user_id', user.email);
+        try {
+            const responseData = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            })
+            if (responseData.status == 200) {
+                router.reload('/profile');
+            }
+            console.log("uploaded image");
+        } catch (error) {
+            console.error(JSON.stringify(error));
+        }
+    };
+
+    const resetToDefault = async () => {
+        const defaultAvatar = await fetch(`/api/user/?email=${thisUser.email}`,
+            {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    avatar: 'default_avatar',
+                }),
+            }
+        );
+
+        router.reload();
+    }
+
+    if (thisUser != null || user.email == email) {
         return (
-            <div className="container emp-profile">
-            <form method="post">
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="profile-img">
-                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""/>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="profile-head">
-                                    <h5>
-                                        {name}
-                                    </h5>
-                                    <h6>
-                                        {user.email}
-                                    </h6>
-                                    {user.email != email && <p className="proile-rating">Bookings: <span>{uniqueUser.bookings}</span></p>}
-                                    {user.email == email && <p className="proile-rating">Current bookings: <span>{totalBookings.length}</span></p>}
-                            <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                <li className="nav-item">
-                                    <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="profile-work">
-                            <p></p>
-                            <a href=""></a><br/>
-                            <a href=""></a><br/>
-                            <a href=""></a>
-                            <p></p>
-                            <a href=""></a><br/>
-                            <a href=""></a><br/>
-                            <a href=""></a><br/>
-                            <a href=""></a><br/>
-                            <a href=""></a><br/>
-                        </div>
-                    </div>
-                    <div className="col-md-8">
-                        <div className="tab-content profile-tab" id="myTabContent">
-                            <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <p>{name}</p>
-                                            </div>
+            <>
+    
+                <section style={{ 'backgroundColor': '#eee' }}>
+                    <div className="container py-5">
+    
+                        <div className="row">
+                            <div className="col-lg-4">
+                                <div className="card mb-4">
+                                    <div className="card-body text-center">
+                                        {thisUser.avatar && thisUser.version !='' && <img src={`https://res.cloudinary.com/dgglbr1hh/image/upload/f_auto,q_auto,w_150,h_150,g_face,c_thumb,r_max/v${thisUser.version}/${thisUser.avatar}`} alt="avatar"
+                                            className="rounded-circle img-fluid" style={{ 'width': '150px' }} />}
+                                        {thisUser.avatar && thisUser.version =='' && <img src={`https://res.cloudinary.com/dgglbr1hh/image/upload/f_auto,q_auto,w_150,h_150,g_face,c_thumb,r_max/${thisUser.avatar}`} alt="avatar"
+                                            className="rounded-circle img-fluid" style={{ 'width': '150px' }} />}
+                                        <h5 className="my-3">{thisUser.name}</h5>
+                                        {thisUser.email == email && <p className="text-muted mb-1">Counselor</p>}
+                                        <div>
+                                            <h4>Select an image to upload</h4>
+                                            <input type="file" onChange={uploadToClient} />
+                                            <button className="mt-3" type="submit" onClick={uploadToServer}>Set Profile Image</button>
                                         </div>
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <p>{user.email}</p>
-                                            </div>
-                                        </div>
+                                        {thisUser.avatar != 'default_avatar' && <button className="mt-3" type="submit" onClick={resetToDefault}>Reset to default</button>}
+                                    </div>
+                                </div>
                             </div>
-                            <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div className="col-lg-8">
+                                <div className="card mb-4 h-400">
+                                    <div className="card-body">
                                         <div className="row">
-                                            <div className="col-md-6">
-                                                <label>Experience</label>
+                                            <div className="col-sm-3">
+                                                <p className="mb-0">Name</p>
                                             </div>
-                                            <div className="col-md-6">
-                                                <p>Expert</p>
+                                            <div className="col-sm-9">
+                                                <p className="text-muted mb-0">{thisUser.name}</p>
                                             </div>
                                         </div>
+                                        <hr />
                                         <div className="row">
-                                            <div className="col-md-6">
-                                                <label>Hourly Rate</label>
+                                            <div className="col-sm-3">
+                                                <p className="mb-0">Email</p>
                                             </div>
-                                            <div className="col-md-6">
-                                                <p>10$/hr</p>
+                                            <div className="col-sm-9">
+                                                <p className="text-muted mb-0">{thisUser.email}</p>
                                             </div>
                                         </div>
+                                        <hr />
                                         <div className="row">
-                                            <div className="col-md-6">
-                                                <label>Total Projects</label>
+                                            <div className="col-sm-3">
+                                                {user.email != email && <p className="mb-0">Bookings</p>}
+                                                {user.email == email && <p className="mb-0">Current total bookings</p>}
                                             </div>
-                                            <div className="col-md-6">
-                                                <p>230</p>
+                                            <div className="col-sm-9">
+                                                {user.email != email && <p className="text-muted mb-0">{thisUser.bookings}</p>}
+                                                {user.email == email && <p className="text-muted mb-0">{totalBookings.length}</p>}
                                             </div>
                                         </div>
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div className="row">
-                                    <div className="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>           
-        </div>
+                </section>
+    
+            </>
         )
     } else {
         return (
@@ -139,36 +166,4 @@ export default function Profile({user, uniqueUser, totalBookings}) {
             </>
         )
     }
-          
 }
-
-export async function getServerSideProps(context) {
-    const session = await getSession(context)
-
-        if (!session) {
-            return {
-                redirect: {
-                    destination: '/login',
-                    permanent: false,
-                },
-            }
-        }
-        const {user} = session;
-
-        const bookings = await prisma.booking.findMany();
-
-        const thisUser = await prisma.user.findUnique({
-            where: {
-                email: user.email,
-            }
-        });
-
-        return {
-            props: {
-                user: user,
-                uniqueUser: thisUser,
-                totalBookings: bookings
-            },
-        }
-}
-

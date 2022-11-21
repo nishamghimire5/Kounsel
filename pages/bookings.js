@@ -48,6 +48,7 @@ export default function Bookings({ initialBookings, busyStatus, user }) {
     const [buttonText, setButtonText] = useState('Make Changes');
     const [busyButtonText, setBusyButtonText] = useState(busyStatus.busy ? 'Toggle to available' : 'Toggle to busy');
     const [bookingEntries, setBookingEntries] = useState(initialBookings);
+    let today = new Date().toISOString().split('T')[0];
 
     const makeChanges = async (event) => {
         if (event.target.value == "Make Changes") {
@@ -193,7 +194,7 @@ export default function Bookings({ initialBookings, busyStatus, user }) {
                                 <td>{booking.email}</td>
                                 {/*<td><DatePicker selected={new Date(booking.date)} onChange={(date = new Date()) => { updateDate(booking.email, date) }} dateFormat="MM/dd/yyyy h:mm aa" timeInputLabel="Time:" showTimeInput disabled={datePickerReadOnly} /></td>*/}
                                 <td>
-                                    <input type="date" id="date" name="date" onChange={(e) => updateDate(e, booking.email)} value={booking.date} disabled={datePickerReadOnly}/>
+                                    <input type="date" id="date" name="date" onKeyDown={(e) => e.preventDefault()} min={today} onChange={(e) => updateDate(e, booking.email)} value={booking.date} disabled={datePickerReadOnly}/>
                                     <input type="time" id="time" name="time" onChange={(e) => updateTime(e, booking.email)} value={booking.time} disabled={datePickerReadOnly}/>
                                 </td>
                                 <td>{booking.message}</td>

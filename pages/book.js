@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client"
 import Link from 'next/link';
 import prisma from '../prisma';
 import email from '../counselormail';
+import Router from 'next/router';
 
 export default function Book({uniqueBooking, user, uniqueUser}) {
 	const [startDate, setStartDate] = useState(new Date());
@@ -55,8 +56,11 @@ export default function Book({uniqueBooking, user, uniqueUser}) {
             },
             body: JSON.stringify({bookings: {increment: 1}}),
 	  })
-	  alert(`Is this what you submitted: ${result.data}`)
+
+	  Router.push('/mybookings');
 	}
+
+	let today = new Date().toISOString().split('T')[0];
 	if (user.email == email) {
 		return (
 			<>
@@ -75,7 +79,7 @@ export default function Book({uniqueBooking, user, uniqueUser}) {
 			return (
 				// We pass the event to the handleSubmit() function on submit.
 				<form onSubmit={handleSubmit}>
-					  <input type="date" id="date" name="date" />   
+					  <input type="date" id="date" name="date" onKeyDown={(e) => e.preventDefault()} min={today} />   
 					  <input type="time" id="time" name="time" />
 			
 				  

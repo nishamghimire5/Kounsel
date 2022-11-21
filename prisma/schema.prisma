@@ -29,4 +29,6 @@ model User {
   name String
   bookings Int
   sessions Int
+  avatar String
+  version String
 }
