@@ -57,7 +57,7 @@ const Cards = () => {
         {/* overflow again caused by this line */}
         <div className="wrapper">
           <div className="container">
-          <h2 className="title text-left">Message from the Counsellor</h2><br/>
+          <h2 className="title text-left">Meet the Counselor</h2><br/>
           <div
             className="container"
             style={{
@@ -91,14 +91,7 @@ const Cards = () => {
                     display: "inline-block",
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  The counselor of Kathmandu University.
                 </p>
               </div>
             </div>

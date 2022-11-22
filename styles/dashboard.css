@@ -40,7 +40,7 @@
 
 .counselor-chat-button {
     position: relative;
-    top: 8rem;
+    top: 4rem;
     left: 28%;
     background: #079DBE;
     color: white;
@@ -49,7 +49,7 @@
 
 .appointment-book-button {
     position: relative;
-    top: 8rem;
+    top: 4rem;
     left: 30%;
     background: #DCDD9A;
     color: black;
