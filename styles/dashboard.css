@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&display=swap');
+
 .dashboard-img {
     position: relative;
     float: left;
-    left: 15rem;
+    left: 7%;
     top: 10rem;
+}
+
+.dashboard-welcome {
+    /* position: relative; */
+    left: 5%;
 }
 
 .dashboard-img-shape {
@@ -14,7 +20,7 @@
     position: relative;
     width: 70rem;
     height: 298px;
-    left: 32rem;
+    left: 20%;
     top: 10rem;
     font-family: 'Barlow', 'san-serif';
     font-style: normal;
@@ -27,7 +33,7 @@
 .counselor-chat-button {
     position: relative;
     top: 8rem;
-    left: 50rem;
+    left: 28%;
     background: #079DBE;
     color: white;
 }
@@ -35,8 +41,8 @@
 .appointment-book-button {
     position: relative;
     top: 8rem;
-    left: 17rem;
+    left: 30%;
     background: #DCDD9A;
-    color:black;
+    color: black;
     border-radius: 66px;
 }
