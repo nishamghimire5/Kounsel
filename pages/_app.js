@@ -9,6 +9,7 @@ import "../styles/conversation.css";
 import '../styles/articles.css';
 import '../styles/profile.css';
 import '../styles/chat.css';
+import '../styles/dashboard.css';
 import "react-datepicker/dist/react-datepicker.css";
 import Layout from './layout/layout';
 import { useEffect } from 'react';

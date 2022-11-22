@@ -105,7 +105,7 @@ export default function Testprof({ totalBookings, user, thisUser }) {
                                         {thisUser.email == email && <p className="text-muted mb-1">Counselor</p>}
                                         <div>
                                             <h4>Select an image to upload</h4>
-                                            <input type="file" onChange={uploadToClient} />
+                                            <input type="file" accept="image/*" onChange={uploadToClient} />
                                             <button className="mt-3" type="submit" onClick={uploadToServer}>Set Profile Image</button>
                                         </div>
                                         {thisUser.avatar != 'default_avatar' && <button className="mt-3" type="submit" onClick={resetToDefault}>Reset to default</button>}

@@ -38,10 +38,6 @@ export async function getServerSideProps(context) {
 
 export default function Bookings({ initialBookings, busyStatus, user }) {
 
-
-
-    console.log(initialBookings);
-    console.log(busyStatus);
     let count = 0;
 
     const [datePickerReadOnly, setReadOnly] = useState(true);
