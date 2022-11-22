@@ -79,13 +79,13 @@ export default function Book({uniqueBooking, user, uniqueUser}) {
 			return (
 				// We pass the event to the handleSubmit() function on submit.
 				<form onSubmit={handleSubmit}>
-					  <input type="date" id="date" name="date" onKeyDown={(e) => e.preventDefault()} min={today} />   
+					  <input className="mx-3 mt-2" type="date" id="date" name="date" onKeyDown={(e) => e.preventDefault()} min={today} />   
 					  <input type="time" id="time" name="time" />
 			
 				  
-				  <textarea className="input-group-text mt-1" type="text" id="message" name="message" placeholder="Message"></textarea>
+				  <textarea className="input-group-text mt-2 mx-3" type="text" id="message" name="message" placeholder="Message"></textarea>
 				  
-				  <button type="submit" className="btn btn-primary">Submit</button>
+				  <button type="submit" className="btn btn-primary mx-3 mt-2">Submit</button>
 				</form>
 			  )
 		} else {

@@ -1,2 +1,2 @@
-const email="sekikunne@gmail.com";
+const email="kucounselor@gmail.com";
 export default email;
