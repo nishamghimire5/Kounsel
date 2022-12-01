@@ -3,7 +3,7 @@ import CardInfo from "./assets/data/councelling.json";
 import Image from "next/image";
 //import { propTypes } from 'react-bootstrap/esm/Image';
 
-import counselorImage from "../public/images/Counselor-modified.png";
+import counselorImage from "../public/images/counselor.png";
 import webinar from "../public/images/1.gif";
 import session from "../public/images/2.gif";
 import chat from "../public/images/3.gif";

@@ -9,6 +9,7 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import React, { useState } from 'react';
 import email from '../../counselormail';
 import fixName from '../../fixname';
+import Head from 'next/head';
 
 export default function TitleBar() {
     const { data: session, status } = useSession();
@@ -19,17 +20,21 @@ export default function TitleBar() {
         finalName = fixName(session.user.name);
     }
 
-    
+
 
     return (<div className="text_spacing">
-        <Navbar expand="lg" style={{background:'#3dccc7'}}>
+        <Head>
+            <title>Kounsel</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
+        <Navbar expand="lg" style={{ background: '#3dccc7' }}>
             <Container fluid>
                 <Link href="/"><a className="text-decoration-none text-light fs-3 fw-bold">Kounsel</a></Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="me-4 my-2 my-lg-0"
-                        style={{ maxHeight: '100px'}}
+                        style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
                         {status === "authenticated" &&
@@ -50,7 +55,7 @@ export default function TitleBar() {
                             <Link href="/mybookings">
                                 <a className='text-decoration-none pt-2 text-light mr-4 fs-6' href="" >My Bookings </a>
                             </Link>}
-                            {status === "authenticated" && session.user.email == email &&
+                        {status === "authenticated" && session.user.email == email &&
                             <Link href="/bookings">
                                 <a className='text-decoration-none pt-2 text-light mr-4 fs-6' href="" >Bookings </a>
                             </Link>}
