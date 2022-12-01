@@ -11,10 +11,7 @@ const FooterPage = () => {
                     className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
                 >
                     {/* <!-- Left --> */}
-                    <div className="me-5 d-none d-lg-block">
-                        <p className="mx-3">Get connected with us on social networks:</p>
-
-                    </div>
+                    
                     {/* <!-- Left --> */}
 
                     {/* <!-- Right --> */}
