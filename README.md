@@ -1,6 +1,6 @@
-# **KOUNSEL**
+# **KOUNSEL** ((recent updates at final-master))
 
-> Kounsel is a project by 3rd sem CS students to initiate a platform for students to share their feelings and discuss their mental problems without the fear of being judged.
+> Kounsel is a project by 3rd sem CS students to initiate a platform for students to share their feelings and discuss their mental problems without the fear of being judged. 
 
 \*Live Hosted on: **[Kounsel](https://kounsel.pages.dev/ "Kounsel")\***
 
