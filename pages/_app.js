@@ -1,35 +1,38 @@
-import '../styles/globals.css'
-import '../styles/cards.css';
-import 'bootstrap/dist/css/bootstrap.css'
-import '../styles/bgimage.css';
+import "../styles/globals.css";
+import "../styles/cards.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "../styles/bgimage.css";
 import "../styles/ChatOnline.css";
 import "../styles/messenger.css";
 import "../styles/message.css";
 import "../styles/conversation.css";
-import '../styles/articles.css';
-import '../styles/profile.css';
-import Layout from './layout/layout';
-import { useEffect } from 'react';
-import Head from 'next/head';
-import { SessionProvider } from 'next-auth/react';
+import "../styles/articles.css";
+import "../styles/titlebar.css";
+import "../styles/profile.css";
+import Layout from "./layout/layout";
+import { useEffect } from "react";
+import Head from "next/head";
+import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps, session }) {
   useEffect(() => {
-    typeof document !== undefined ? require('bootstrap/dist/js/bootstrap') : null
-  }, [])
+    typeof document !== undefined
+      ? require("bootstrap/dist/js/bootstrap")
+      : null;
+  }, []);
   return (
     <>
       <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <SessionProvider session={session}>
-        <Layout >
+        <Layout>
           <Component {...pageProps} />
         </Layout>
       </SessionProvider>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
