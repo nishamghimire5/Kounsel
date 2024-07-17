@@ -89,6 +89,11 @@
     color: rgb(6, 249, 99);
     font-weight: bolder;
   }
+
+  .card-position{
+    position:relative;
+    top: 45rem;
+  }
   /* to bring the blue mask over the pictures or cards */
   /* .card .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);

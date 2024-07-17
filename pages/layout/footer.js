@@ -11,10 +11,7 @@ const FooterPage = () => {
                     className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
                 >
                     {/* <!-- Left --> */}
-                    <div className="me-5 d-none d-lg-block">
-                        <p className="mx-3">Get connected with us on social networks:</p>
-
-                    </div>
+                    
                     {/* <!-- Left --> */}
 
                     {/* <!-- Right --> */}
@@ -88,7 +85,7 @@ const FooterPage = () => {
                                     <a href="#!" className="text-reset">Nisham</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Prekshya</a>
+                                    <a href="https://prekshya.life/" className="text-reset">Prekshya</a>
                                 </p>
                                 <p>
                                     <a href="#!" className="text-reset">Sashank</a>
@@ -121,7 +118,7 @@ const FooterPage = () => {
                 {/* <!-- Copyright --> */}
                 <div className="text-center p-4">
                     © 2022 Copyright: &nbsp;
-                    <a className="text-reset fw-bold" href="https://kounnsel.ku.edu.np/">Kounsel</a>
+                    <a className="text-reset fw-bold" href="https://kounsel.vercel.app">Kounsel</a>
                 </div>
                 {/* <!-- Copyright --> */}
             </footer>
